@@ -4,7 +4,7 @@
     <title>Blog</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="max-w-3xl mx-auto px-8 py-12 bg-gray-50 text-gray-800">
+ <body class="max-w-3xl mx-auto px-8 py-12 bg-gray-50 text-gray-800">
 
   <!-- Navegación principal -->
   <nav class="mb-10">
@@ -13,57 +13,71 @@
     <a href="blog.html" class="text-blue-500 hover:text-blue-700">Blog</a>
   </nav>
 
-  <!-- Título de la página -->
+  <!-- Título -->
   <h1 class="text-4xl font-bold text-blue-900 border-b-4 border-blue-400 pb-4 mb-8">
     Blog
   </h1>
 
-  <!-- Contenedor donde se cargarán los artículos dinámicamente -->
-  <div id="articulos" class="space-y-6">
-    <p class="text-gray-400">Cargando artículos...</p>
+  <p class="text-gray-600 mb-8">Artículos sobre salud, tecnología y emprendimiento.</p>
+
+  <!-- ZONA DE ARTÍCULOS — duplica el bloque comentado para agregar nuevos -->
+  <div class="space-y-6">
+
+    <!-- ARTÍCULO 1 -->
+    <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
+      <!-- Fecha de publicación -->
+      <p class="text-xs text-gray-400 mb-2">Marzo 2026</p>
+      <!-- Título del artículo -->
+      <h2 class="text-xl font-bold text-gray-800 mb-2">Personal Website Launch</h2>
+      <!-- Preview del contenido -->
+      <p class="text-gray-600 text-sm mb-4">
+        Primer artículo del blog — el lanzamiento de esta página personal 
+        y el proceso de aprendizaje detrás de ella.
+      </p>
+      <!-- Enlace directo al artículo en Substack -->
+      <a href="https://healthtechcl.substack.com/p/personal-website-launch" 
+         target="_blank"
+         class="text-blue-500 hover:text-blue-700 text-sm font-semibold">
+        Leer en Substack →
+      </a>
+    </div>
+
+    <!-- PLANTILLA PARA PRÓXIMOS ARTÍCULOS -->
+    <!-- Para agregar un artículo nuevo, copia este bloque,
+         elimina los símbolos de comentario y rellena los datos -->
+    <!-- <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
+      <p class="text-xs text-gray-400 mb-2">Mes Año</p>
+      <h2 class="text-xl font-bold text-gray-800 mb-2">Título del artículo</h2>
+      <p class="text-gray-600 text-sm mb-4">Preview del contenido...</p>
+      <a href="URL_DEL_ARTICULO_EN_SUBSTACK" target="_blank"
+         class="text-blue-500 hover:text-blue-700 text-sm font-semibold">
+        Leer en Substack →
+      </a>
+    </div> -->
+
+  <!-- Enlace al archivo completo en Substack -->
+  <div class="mt-10 pt-6 border-t border-gray-200">
+    <a href="https://healthtechcl.substack.com" 
+       target="_blank"
+       class="text-blue-500 hover:text-blue-700 font-semibold">
+      Ver todos los artículos en Substack →
+    </a>
   </div>
 
-  <script>
-    // URL del RSS de Substack convertido a JSON via rss2json
-    // Este servicio intermediario convierte XML a un formato
-    // que JavaScript puede leer fácilmente
-    const rssUrl = 'https://healthtechcl.substack.com/feed';
-    const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${rssUrl}`;
-
-    // Consultamos el servicio intermediario
-    fetch(apiUrl)
-      .then(response => response.json())
-      .then(data => {
-        const contenedor = document.getElementById('articulos');
-        contenedor.innerHTML = ''; // Limpiamos el mensaje de "cargando"
-
-        // Recorremos cada artículo del RSS
-        data.items.forEach(articulo => {
-
-          // Formateamos la fecha en español
-          const fecha = new Date(articulo.pubDate)
-            .toLocaleDateString('es-CL', { year: 'numeric', month: 'long', day: 'numeric' });
-
-          // Creamos una tarjeta por cada artículo
-          contenedor.innerHTML += `
-            <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
-              <h2 class="text-xl font-bold text-gray-800 mb-2">${articulo.title}</h2>
-              <p class="text-sm text-gray-400 mb-3">${fecha}</p>
-              <p class="text-gray-600 text-sm mb-4">${articulo.description.replace(/<[^>]*>/g, '').substring(0, 200)}...</p>
-              <a href="${articulo.link}" target="_blank"
-                 class="text-blue-500 hover:text-blue-700 text-sm font-semibold">
-                Leer en Substack →
-              </a>
-            </div>
-          `;
-        });
-      })
-      // Si falla la carga, mostramos un mensaje amigable
-      .catch(() => {
-        document.getElementById('articulos').innerHTML =
-          '<p class="text-gray-400">No se pudieron cargar los artículos. Intenta más tarde.</p>';
-      });
-  </script>
+  <!-- Suscripción via embed oficial de Substack -->
+  <div class="mt-10 pt-6 border-t border-gray-200">
+    <h3 class="text-lg font-semibold text-gray-700 mb-4">
+      Suscríbete para recibir nuevos artículos
+    </h3>
+    <iframe
+      src="https://healthtechcl.substack.com/embed"
+      width="100%"
+      height="320"
+      style="border:1px solid #EEE; background:white; border-radius: 8px;"
+      frameborder="0"
+      scrolling="no">
+    </iframe>
+  </div>
 
 </body>
 </html>

@@ -13,49 +13,95 @@
     </nav>
 
     <!-- Foto de perfil cargada dinámicamente desde GitHub API -->
-<div id="foto-perfil" class="mb-6"></div>
+    <div id="foto-perfil" class="mb-6"></div>
 
-<script>
-  // Consultamos la API de GitHub para obtener el perfil
-  fetch('https://api.github.com/users/MuenaWWW')
-    .then(response => response.json())
-    .then(data => {
-      // Insertamos la foto en el div reservado
-      document.getElementById('foto-perfil').innerHTML = `
-        <img 
-          src="${data.avatar_url}" 
-          alt="Foto de perfil de Sebastián"
-          class="w-24 h-24 rounded-full shadow-md"
-        />
-      `;
-    });
-</script>
+    <script>
+      // Consultamos la API de GitHub para obtener el perfil
+      fetch('https://api.github.com/users/MuenaWWW')
+        .then(response => response.json())
+        .then(data => {
+          // Insertamos la foto en el div reservado
+          document.getElementById('foto-perfil').innerHTML = `
+            <img 
+              src="${data.avatar_url}" 
+              alt="Foto de perfil de Sebastián"
+              class="w-24 h-24 rounded-full shadow-md"
+            />
+          `;
+        });
+    </script>
     
-  <h1 class="text-4xl font-bold text-blue-900 border-b-4 border-blue-400 pb-4 mb-8">
-    Sebastián Muena
-  </h1>
-  <p class="text-lg text-gray-600 mb-12">Padre, economista y cofundador de Candel.</p>
+    <h1 class="text-4xl font-bold text-blue-900 border-b-4 border-blue-400 pb-4 mb-8">
+      Sebastián Muena
+    </h1>
+    <p class="text-lg text-gray-600 mb-12">Padre, economista y cofundador de Candel.</p>
 
-  <h2 class="text-2xl font-bold text-blue-700 mt-10 mb-4">Proyectos</h2>
+    <h2 class="text-2xl font-bold text-blue-700 mt-10 mb-4">Proyectos</h2>
 
-  <h3 class="text-lg font-semibold text-gray-700 mt-6">Ideas sector inmobiliario</h3>
-  <p class="text-gray-600">Apartado para consolidar proyectos individuales, personales</p>
+    <h3 class="text-lg font-semibold text-gray-700 mt-6">Ideas sector inmobiliario</h3>
+    <p class="text-gray-600">Apartado para consolidar proyectos individuales, personales</p>
 
-  <h3 class="text-lg font-semibold text-gray-700 mt-6">Juegos Amaro</h3>
-  <p class="text-gray-600">Juegos para Amaro</p>
+    <h3 class="text-lg font-semibold text-gray-700 mt-6">Juegos Amaro</h3>
+    <p class="text-gray-600">Juegos para Amaro</p>
 
-  <h3 class="text-lg font-semibold text-gray-700 mt-6">Libros recomendados</h3>
-  <p class="text-gray-600">The Hard Things About Hard Things - Ben Horowitz</p>
+    <h3 class="text-lg font-semibold text-gray-700 mt-6">Libros recomendados</h3>
+    <p class="text-gray-600">The Hard Things About Hard Things - Ben Horowitz</p>
 
-  <h2 class="text-2xl font-bold text-blue-700 mt-10 mb-4">Blog</h2>
-  <p class="text-gray-600">Próximamente...</p>
+    <h2 class="text-2xl font-bold text-blue-700 mt-10 mb-4">Blog</h2>
+    <p class="text-gray-600">Próximamente...</p>
 
-  <h2 class="text-2xl font-bold text-blue-700 mt-10 mb-4">Contacto</h2>
-  <h3 class="text-lg font-semibold text-gray-700 mt-6">Redes sociales</h3>
-  <p class="text-gray-600">Perfil personal:
-    <a href="https://www.linkedin.com/in/sebastian-muena-cortes/"
-       class="text-blue-500 underline hover:text-blue-700">LinkedIn</a>
-  </p>
+    <h2 class="text-2xl font-bold text-blue-700 mt-10 mb-4">Contacto</h2>
+    <h3 class="text-lg font-semibold text-gray-700 mt-6">Redes sociales</h3>
+    <p class="text-gray-600">Perfil personal:
+      <a href="https://www.linkedin.com/in/sebastian-muena-cortes/"
+         class="text-blue-500 underline hover:text-blue-700">LinkedIn</a>
+    </p>
+
+    <!-- Contenedor flex — pone los botones lado a lado -->
+    <div class="flex gap-4 mt-10">
+
+      <!-- Botón toggle de información -->
+      <button 
+        onclick="mostrarMensaje()"
+        class="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-800">
+        Saber más sobre mí
+      </button>
+
+      <!-- Botón parodia -->
+      <button 
+        onclick="saludar()"
+        class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-800">
+        No aprietes este botón
+      </button>
+
+    </div>
+
+    <!-- Contenedor vacío que se llenará con JavaScript -->
+    <div id="mas-info" class="mt-6"></div>
+
+    <script>
+      // Toggle — muestra u oculta el contenido según el estado actual
+      function mostrarMensaje() {
+        const contenedor = document.getElementById('mas-info');
+        
+        // Si está vacío muestra el contenido — si no, lo oculta
+        if (contenedor.innerHTML === '') {
+          contenedor.innerHTML = `
+            <div class="bg-blue-50 border border-blue-200 rounded-lg p-6">
+              <p class="text-gray-700">Soy un apasionado por la intersección entre salud y 
+              tecnología. Me gustan los videojuegos, series y anime. Estar en familia y aprender.</p>
+            </div>
+          `;
+        } else {
+          contenedor.innerHTML = '';
+        }
+      }
+
+      // Parodia — muestra alerta al hacer click
+      function saludar() {
+        alert('DIJE QUE NO!!! -.-');
+      }
+    </script>
 
 </body>
 </html>
