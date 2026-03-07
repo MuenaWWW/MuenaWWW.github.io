@@ -6,16 +6,64 @@
   </head>
   <body class="max-w-3xl mx-auto px-8 py-12 bg-gray-50 text-gray-800">
 
-    <nav class="mb-10">
-      <a href="index.html" class="text-blue-500 hover:text-blue-700 mr-6">Inicio</a>
-      <a href="proyectos.html" class="text-blue-500 hover:text-blue-700 mr-6">Proyectos</a>
-      <a href="blog.html" class="text-blue-500 hover:text-blue-700">Blog</a>
-    </nav>
+  <!-- Navegación principal -->
+  <nav class="mb-10">
+    <a href="index.html" class="text-blue-500 hover:text-blue-700 mr-6">Inicio</a>
+    <a href="proyectos.html" class="text-blue-500 hover:text-blue-700 mr-6">Proyectos</a>
+    <a href="blog.html" class="text-blue-500 hover:text-blue-700">Blog</a>
+  </nav>
 
-    <h1 class="text-4xl font-bold text-blue-900 border-b-4 border-blue-400 pb-4 mb-8">
-      Blog
-    </h1>
-    <p class="text-gray-600">Contenido próximamente...</p>
+  <!-- Título de la página -->
+  <h1 class="text-4xl font-bold text-blue-900 border-b-4 border-blue-400 pb-4 mb-8">
+    Blog
+  </h1>
 
-  </body>
+  <!-- Contenedor donde se cargarán los artículos dinámicamente -->
+  <div id="articulos" class="space-y-6">
+    <p class="text-gray-400">Cargando artículos...</p>
+  </div>
+
+  <script>
+    // URL del RSS de Substack convertido a JSON via rss2json
+    // Este servicio intermediario convierte XML a un formato
+    // que JavaScript puede leer fácilmente
+    const rssUrl = 'https://healthtechcl.substack.com/feed';
+    const apiUrl = `https://api.rss2json.com/v1/api.json?rss_url=${rssUrl}`;
+
+    // Consultamos el servicio intermediario
+    fetch(apiUrl)
+      .then(response => response.json())
+      .then(data => {
+        const contenedor = document.getElementById('articulos');
+        contenedor.innerHTML = ''; // Limpiamos el mensaje de "cargando"
+
+        // Recorremos cada artículo del RSS
+        data.items.forEach(articulo => {
+
+          // Formateamos la fecha en español
+          const fecha = new Date(articulo.pubDate)
+            .toLocaleDateString('es-CL', { year: 'numeric', month: 'long', day: 'numeric' });
+
+          // Creamos una tarjeta por cada artículo
+          contenedor.innerHTML += `
+            <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
+              <h2 class="text-xl font-bold text-gray-800 mb-2">${articulo.title}</h2>
+              <p class="text-sm text-gray-400 mb-3">${fecha}</p>
+              <p class="text-gray-600 text-sm mb-4">${articulo.description.replace(/<[^>]*>/g, '').substring(0, 200)}...</p>
+              <a href="${articulo.link}" target="_blank"
+                 class="text-blue-500 hover:text-blue-700 text-sm font-semibold">
+                Leer en Substack →
+              </a>
+            </div>
+          `;
+        });
+      })
+      // Si falla la carga, mostramos un mensaje amigable
+      .catch(() => {
+        document.getElementById('articulos').innerHTML =
+          '<p class="text-gray-400">No se pudieron cargar los artículos. Intenta más tarde.</p>';
+      });
+  </script>
+
+</body>
 </html>
