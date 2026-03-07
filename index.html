@@ -6,6 +6,7 @@
   </head>
   <body class="max-w-3xl mx-auto px-8 py-12 bg-gray-50 text-gray-800">
 
+    <!-- Navegación principal -->
     <nav class="mb-10">
       <a href="index.html" class="text-blue-500 hover:text-blue-700 mr-6">Inicio</a>
       <a href="proyectos.html" class="text-blue-500 hover:text-blue-700 mr-6">Proyectos</a>
@@ -15,27 +16,13 @@
     <!-- Foto de perfil cargada dinámicamente desde GitHub API -->
     <div id="foto-perfil" class="mb-6"></div>
 
-    <script>
-      // Consultamos la API de GitHub para obtener el perfil
-      fetch('https://api.github.com/users/MuenaWWW')
-        .then(response => response.json())
-        .then(data => {
-          // Insertamos la foto en el div reservado
-          document.getElementById('foto-perfil').innerHTML = `
-            <img 
-              src="${data.avatar_url}" 
-              alt="Foto de perfil de Sebastián"
-              class="w-24 h-24 rounded-full shadow-md"
-            />
-          `;
-        });
-    </script>
-    
+    <!-- Título y descripción -->
     <h1 class="text-4xl font-bold text-blue-900 border-b-4 border-blue-400 pb-4 mb-8">
       Sebastián Muena
     </h1>
     <p class="text-lg text-gray-600 mb-12">Padre, economista y cofundador de Candel.</p>
 
+    <!-- Sección Proyectos -->
     <h2 class="text-2xl font-bold text-blue-700 mt-10 mb-4">Proyectos</h2>
 
     <h3 class="text-lg font-semibold text-gray-700 mt-6">Ideas sector inmobiliario</h3>
@@ -47,9 +34,11 @@
     <h3 class="text-lg font-semibold text-gray-700 mt-6">Libros recomendados</h3>
     <p class="text-gray-600">The Hard Things About Hard Things - Ben Horowitz</p>
 
+    <!-- Sección Blog -->
     <h2 class="text-2xl font-bold text-blue-700 mt-10 mb-4">Blog</h2>
     <p class="text-gray-600">Próximamente...</p>
 
+    <!-- Sección Contacto -->
     <h2 class="text-2xl font-bold text-blue-700 mt-10 mb-4">Contacto</h2>
     <h3 class="text-lg font-semibold text-gray-700 mt-6">Redes sociales</h3>
     <p class="text-gray-600">Perfil personal:
@@ -57,7 +46,63 @@
          class="text-blue-500 underline hover:text-blue-700">LinkedIn</a>
     </p>
 
-    <!-- Contenedor flex — pone los botones lado a lado -->
+    <!-- Formulario de contacto conectado a Formspree -->
+    <h3 class="text-lg font-semibold text-gray-700 mt-8 mb-4">Envíame un mensaje</h3>
+
+    <!-- Mensaje de confirmación — oculto por defecto -->
+    <div id="confirmacion" class="hidden bg-green-50 border border-green-200 
+         rounded-lg p-4 mb-4">
+      <p class="text-green-700">¡Mensaje enviado! Te responderé pronto.</p>
+    </div>
+
+    <!-- Campos del formulario -->
+    <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
+
+      <!-- Campo nombre -->
+      <div class="mb-4">
+        <label class="block text-sm font-semibold text-gray-700 mb-1">Nombre</label>
+        <input 
+          id="nombre"
+          type="text" 
+          placeholder="Tu nombre"
+          class="w-full border border-gray-300 rounded-lg px-4 py-2 
+                 text-gray-700 focus:outline-none focus:border-blue-400">
+      </div>
+
+      <!-- Campo email -->
+      <div class="mb-4">
+        <label class="block text-sm font-semibold text-gray-700 mb-1">Email</label>
+        <input 
+          id="email"
+          type="email" 
+          placeholder="tu@email.com"
+          class="w-full border border-gray-300 rounded-lg px-4 py-2 
+                 text-gray-700 focus:outline-none focus:border-blue-400">
+      </div>
+
+      <!-- Campo mensaje -->
+      <div class="mb-6">
+        <label class="block text-sm font-semibold text-gray-700 mb-1">Mensaje</label>
+        <textarea 
+          id="mensaje"
+          rows="4"
+          placeholder="¿En qué puedo ayudarte?"
+          class="w-full border border-gray-300 rounded-lg px-4 py-2 
+                 text-gray-700 focus:outline-none focus:border-blue-400">
+        </textarea>
+      </div>
+
+      <!-- Botón enviar -->
+      <button
+        onclick="enviarFormulario()"
+        class="w-full px-6 py-3 bg-blue-600 text-white font-semibold 
+               rounded-lg hover:bg-blue-800">
+        Enviar mensaje
+      </button>
+
+    </div>
+
+    <!-- Botones interactivos -->
     <div class="flex gap-4 mt-10">
 
       <!-- Botón toggle de información -->
@@ -79,12 +124,24 @@
     <!-- Contenedor vacío que se llenará con JavaScript -->
     <div id="mas-info" class="mt-6"></div>
 
+    <!-- Todo el JavaScript junto al final -->
     <script>
-      // Toggle — muestra u oculta el contenido según el estado actual
+      // Carga foto de perfil desde GitHub API
+      fetch('https://api.github.com/users/MuenaWWW')
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById('foto-perfil').innerHTML = `
+            <img 
+              src="${data.avatar_url}" 
+              alt="Foto de perfil de Sebastián"
+              class="w-24 h-24 rounded-full shadow-md"
+            />
+          `;
+        });
+
+      // Toggle — muestra u oculta información adicional
       function mostrarMensaje() {
         const contenedor = document.getElementById('mas-info');
-        
-        // Si está vacío muestra el contenido — si no, lo oculta
         if (contenedor.innerHTML === '') {
           contenedor.innerHTML = `
             <div class="bg-blue-50 border border-blue-200 rounded-lg p-6">
@@ -101,7 +158,39 @@
       function saludar() {
         alert('DIJE QUE NO!!! -.-');
       }
+
+      // Envía el formulario a Formspree via fetch()
+      function enviarFormulario() {
+        const nombre  = document.getElementById('nombre').value;
+        const email   = document.getElementById('email').value;
+        const mensaje = document.getElementById('mensaje').value;
+
+        // Validación — verifica que no haya campos vacíos
+        if (!nombre || !email || !mensaje) {
+          alert('Por favor completa todos los campos');
+          return;
+        }
+
+        // Enviamos los datos a Formspree
+        fetch('https://formspree.io/f/xbdzloag', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ nombre, email, mensaje })
+        })
+        .then(response => {
+          if (response.ok) {
+            // Mostramos confirmación y limpiamos campos
+            document.getElementById('confirmacion').classList.remove('hidden');
+            document.getElementById('nombre').value   = '';
+            document.getElementById('email').value    = '';
+            document.getElementById('mensaje').value  = '';
+          }
+        })
+        .catch(() => {
+          alert('Hubo un error al enviar. Intenta más tarde.');
+        });
+      }
     </script>
 
-</body>
+  </body>
 </html>
