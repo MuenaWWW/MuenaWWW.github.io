@@ -1,83 +1,108 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<!--
+	Miniport by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+	Adaptado por Sebastián Muena — Marzo 2026
+-->
 <html>
-  <head>
-    <title>Blog</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
- <body class="max-w-3xl mx-auto px-8 py-12 bg-gray-50 text-gray-800">
+	<head>
+		<title>Blog — Sebastián Muena</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
 
-  <!-- Navegación principal -->
-  <nav class="mb-10">
-    <a href="index.html" class="text-blue-500 hover:text-blue-700 mr-6">Inicio</a>
-    <a href="proyectos.html" class="text-blue-500 hover:text-blue-700 mr-6">Proyectos</a>
-    <a href="blog.html" class="text-blue-500 hover:text-blue-700">Blog</a>
-  </nav>
+		<!-- Nav -->
+		<nav id="nav">
+			<ul class="container">
+				<li><a href="index.html">Inicio</a></li>
+				<li><a href="sobre-mi.html">Sobre mí</a></li>
+				<li><a href="proyectos.html">Proyectos</a></li>
+				<li><a href="blog.html">Blog</a></li>
+				<li><a href="index.html#contact">Contacto</a></li>
+			</ul>
+		</nav>
 
-  <!-- Título -->
-  <h1 class="text-4xl font-bold text-blue-900 border-b-4 border-blue-400 pb-4 mb-8">
-    Blog
-  </h1>
+		<!-- Blog -->
+		<article id="top" class="wrapper style2">
+			<div class="container">
+				<header>
+					<h2>Blog</h2>
+					<p>Artículos sobre salud, tecnología y emprendimiento.</p>
+				</header>
 
-  <p class="text-gray-600 mb-8">Artículos sobre salud, tecnología y emprendimiento.</p>
+				<div class="row aln-center">
 
-  <!-- ZONA DE ARTÍCULOS — duplica el bloque comentado para agregar nuevos -->
-  <div class="space-y-6">
+					<!-- ARTÍCULO 1 -->
+					<div class="col-6 col-12-medium">
+						<section class="box style1">
+							<h3>Personal Website Launch</h3>
+							<p style="font-size: 0.85em; color: #aaa;">Marzo 2026</p>
+							<p>Primer artículo del blog — el lanzamiento de esta página personal y el proceso de aprendizaje detrás de ella.</p>
+							<a href="https://healthtechcl.substack.com/p/personal-website-launch"
+							   target="_blank"
+							   class="button small">Leer en Substack →</a>
+						</section>
+					</div>
 
-    <!-- ARTÍCULO 1 -->
-    <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
-      <!-- Fecha de publicación -->
-      <p class="text-xs text-gray-400 mb-2">Marzo 2026</p>
-      <!-- Título del artículo -->
-      <h2 class="text-xl font-bold text-gray-800 mb-2">Personal Website Launch</h2>
-      <!-- Preview del contenido -->
-      <p class="text-gray-600 text-sm mb-4">
-        Primer artículo del blog — el lanzamiento de esta página personal 
-        y el proceso de aprendizaje detrás de ella.
-      </p>
-      <!-- Enlace directo al artículo en Substack -->
-      <a href="https://healthtechcl.substack.com/p/personal-website-launch" 
-         target="_blank"
-         class="text-blue-500 hover:text-blue-700 text-sm font-semibold">
-        Leer en Substack →
-      </a>
-    </div>
+					<!-- PLANTILLA PARA PRÓXIMOS ARTÍCULOS -->
+					<!-- Para agregar un artículo nuevo: copia este bloque,
+					     elimina los símbolos de comentario y rellena los datos -->
+					<!--
+					<div class="col-6 col-12-medium">
+						<section class="box style1">
+							<h3>Título del artículo</h3>
+							<p style="font-size: 0.85em; color: #aaa;">Mes Año</p>
+							<p>Preview del contenido...</p>
+							<a href="URL_DEL_ARTICULO_EN_SUBSTACK" target="_blank" class="button small">Leer en Substack →</a>
+						</section>
+					</div>
+					-->
 
-    <!-- PLANTILLA PARA PRÓXIMOS ARTÍCULOS -->
-    <!-- Para agregar un artículo nuevo, copia este bloque,
-         elimina los símbolos de comentario y rellena los datos -->
-    <!-- <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
-      <p class="text-xs text-gray-400 mb-2">Mes Año</p>
-      <h2 class="text-xl font-bold text-gray-800 mb-2">Título del artículo</h2>
-      <p class="text-gray-600 text-sm mb-4">Preview del contenido...</p>
-      <a href="URL_DEL_ARTICULO_EN_SUBSTACK" target="_blank"
-         class="text-blue-500 hover:text-blue-700 text-sm font-semibold">
-        Leer en Substack →
-      </a>
-    </div> -->
+				</div>
 
-  <!-- Enlace al archivo completo en Substack -->
-  <div class="mt-10 pt-6 border-t border-gray-200">
-    <a href="https://healthtechcl.substack.com" 
-       target="_blank"
-       class="text-blue-500 hover:text-blue-700 font-semibold">
-      Ver todos los artículos en Substack →
-    </a>
-  </div>
+				<!-- Embed oficial de suscripción a Substack -->
+				<div style="max-width: 500px; margin: 3em auto 0;">
+					<h3 style="text-align:center; margin-bottom: 1em;">Suscríbete al newsletter</h3>
+					<iframe
+						src="https://healthtechcl.substack.com/embed"
+						width="100%"
+						height="320"
+						style="border:1px solid #EEE; background:white; border-radius: 8px;"
+						frameborder="0"
+						scrolling="no">
+					</iframe>
+				</div>
 
-  <!-- Suscripción via embed oficial de Substack -->
-  <div class="mt-10 pt-6 border-t border-gray-200">
-    <h3 class="text-lg font-semibold text-gray-700 mb-4">
-      Suscríbete para recibir nuevos artículos
-    </h3>
-    <iframe
-      src="https://healthtechcl.substack.com/embed"
-      width="100%"
-      height="320"
-      style="border:1px solid #EEE; background:white; border-radius: 8px;"
-      frameborder="0"
-      scrolling="no">
-    </iframe>
-  </div>
+				<footer>
+					<a href="https://healthtechcl.substack.com" target="_blank" class="button large">
+						Ver todos los artículos en Substack →
+					</a>
+				</footer>
+			</div>
+		</article>
 
-</body>
+		<!-- Footer -->
+		<article class="wrapper style4">
+			<div class="container medium">
+				<footer>
+					<ul id="copyright">
+						<li>&copy; Sebastián Muena 2026.</li>
+						<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</footer>
+			</div>
+		</article>
+
+		<!-- Scripts del template -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+	</body>
 </html>

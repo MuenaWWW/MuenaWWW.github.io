@@ -1,76 +1,131 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<!--
+	Miniport by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+	Adaptado por Sebastián Muena — Marzo 2026
+-->
 <html>
-  <head>
-    <title>Proyectos</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body class="max-w-3xl mx-auto px-8 py-12 bg-gray-50 text-gray-800">
+	<head>
+		<title>Proyectos — Sebastián Muena</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
 
-  <nav class="mb-10">
-    <a href="index.html" class="text-blue-500 hover:text-blue-700 mr-6">Inicio</a>
-    <a href="proyectos.html" class="text-blue-500 hover:text-blue-700 mr-6">Proyectos</a>
-    <a href="blog.html" class="text-blue-500 hover:text-blue-700">Blog</a>
-  </nav>
+		<!-- Nav -->
+		<nav id="nav">
+			<ul class="container">
+				<li><a href="index.html">Inicio</a></li>
+				<li><a href="sobre-mi.html">Sobre mí</a></li>
+				<li><a href="proyectos.html">Proyectos</a></li>
+				<li><a href="blog.html">Blog</a></li>
+				<li><a href="index.html#contact">Contacto</a></li>
+			</ul>
+		</nav>
 
-  <h1 class="text-4xl font-bold text-blue-900 border-b-4 border-blue-400 pb-4 mb-8">
-    Proyectos
-  </h1>
+		<!-- Proyectos personales -->
+		<article id="top" class="wrapper style3">
+			<div class="container">
+				<header>
+					<h2>Proyectos</h2>
+					<p>Ideas, experimentos y cosas que estoy construyendo.</p>
+				</header>
+				<div class="row">
 
-  <!-- Perfil GitHub -->
-  <div id="perfil-github" class="mb-12"></div>
+					<!-- Proyecto 1 -->
+					<div class="col-4 col-6-medium col-12-small">
+						<article class="box style2">
+							<h3>Ideas sector inmobiliario</h3>
+							<p>Apartado para consolidar proyectos individuales y personales relacionados al sector.</p>
+						</article>
+					</div>
 
-  <!-- Linea para poner estadísticas de Github -->
-<!-- Estadísticas de GitHub via streak-stats -->
-<div class="my-8">
-  <img 
-    src="https://streak-stats.demolab.com?user=MuenaWWW&locale=es" 
-    alt="Estadísticas GitHub de Sebastián"
-    class="rounded-lg shadow-sm"
-    onerror="this.style.display='none'"
-  />
-</div>
+					<!-- Proyecto 2 -->
+					<div class="col-4 col-6-medium col-12-small">
+						<article class="box style2">
+							<h3>Juegos Amaro</h3>
+							<p>Juegos y actividades para Amaro.</p>
+						</article>
+					</div>
 
-  <!-- Repositorios -->
-  <h2 class="text-2xl font-bold text-blue-700 mb-6">Repositorios en GitHub</h2>
-  <div id="repos" class="space-y-4"></div>
+					<!-- Proyecto 3 -->
+					<div class="col-4 col-6-medium col-12-small">
+						<article class="box style2">
+							<h3>Libros recomendados</h3>
+							<p>The Hard Things About Hard Things — Ben Horowitz.</p>
+						</article>
+					</div>
 
-  <script>
-    // 1. Consultar perfil
-    fetch('https://api.github.com/users/MuenaWWW')
-      .then(response => response.json())
-      .then(data => {
-        document.getElementById('perfil-github').innerHTML = `
-          <div class="flex items-center gap-6">
-            <img src="${data.avatar_url}" class="w-20 h-20 rounded-full" />
-            <div>
-              <h2 class="text-2xl font-bold text-gray-800">${data.name}</h2>
-              <p class="text-gray-600">${data.bio || ''}</p>
-              <p class="text-sm text-gray-400 mt-1">
-                ${data.public_repos} repositorios · ${data.followers} seguidores
-              </p>
-            </div>
-          </div>
-        `;
-      });
+				</div>
 
-    // 2. Consultar repositorios
-    fetch('https://api.github.com/users/MuenaWWW/repos?sort=updated')
-      .then(response => response.json())
-      .then(repos => {
-        const contenedor = document.getElementById('repos');
-        repos.forEach(repo => {
-          contenedor.innerHTML += `
-            <div class="bg-white rounded-lg p-4 shadow-sm border border-gray-200">
-              <a href="${repo.html_url}" target="_blank"
-                 class="text-blue-600 font-semibold hover:underline">${repo.name}</a>
-              <p class="text-gray-600 text-sm mt-1">${repo.description || 'Sin descripción'}</p>
-              <p class="text-xs text-gray-400 mt-2">⭐ ${repo.stargazers_count} · 
-                 Actualizado: ${new Date(repo.updated_at).toLocaleDateString('es-CL')}</p>
-            </div>
-          `;
-        });
-      });
-  </script>
+				<!-- Repositorios de GitHub cargados dinámicamente via API -->
+				<header style="margin-top: 3em;">
+					<h2>Repositorios en GitHub</h2>
+				</header>
+				<div id="repos" class="row">
+					<p>Cargando repositorios...</p>
+				</div>
 
-</body>
+				<footer>
+					<a href="blog.html" class="button large">Ver mi blog</a>
+				</footer>
+			</div>
+		</article>
+
+		<!-- Footer -->
+		<article class="wrapper style4">
+			<div class="container medium">
+				<footer>
+					<ul id="copyright">
+						<li>&copy; Sebastián Muena 2026.</li>
+						<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</footer>
+			</div>
+		</article>
+
+		<!-- Scripts del template -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+		<!-- Scripts personalizados -->
+		<script>
+			// =============================================
+			// GITHUB API — Repositorios
+			// =============================================
+			fetch('https://api.github.com/users/MuenaWWW/repos?sort=updated')
+				.then(response => response.json())
+				.then(repos => {
+					const contenedor = document.getElementById('repos');
+					contenedor.innerHTML = '';
+
+					// Creamos una tarjeta por cada repositorio
+					repos.forEach(repo => {
+						const fecha = new Date(repo.updated_at)
+							.toLocaleDateString('es-CL', { year: 'numeric', month: 'long' });
+
+						contenedor.innerHTML += `
+							<div class="col-4 col-6-medium col-12-small">
+								<article class="box style2">
+									<h3><a href="${repo.html_url}" target="_blank">${repo.name}</a></h3>
+									<p>${repo.description || 'Sin descripción'}</p>
+									<p style="font-size: 0.8em; color: #aaa;">⭐ ${repo.stargazers_count} · ${fecha}</p>
+								</article>
+							</div>
+						`;
+					});
+				})
+				.catch(() => {
+					document.getElementById('repos').innerHTML =
+						'<p>No se pudieron cargar los repositorios.</p>';
+				});
+		</script>
+
+	</body>
 </html>

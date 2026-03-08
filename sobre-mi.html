@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<!--
+	Miniport by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+	Adaptado por Sebastián Muena — Marzo 2026
+-->
+<html>
+	<head>
+		<title>Sobre mí — Sebastián Muena</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Nav -->
+		<nav id="nav">
+			<ul class="container">
+				<li><a href="index.html">Inicio</a></li>
+				<li><a href="sobre-mi.html">Sobre mí</a></li>
+				<li><a href="proyectos.html">Proyectos</a></li>
+				<li><a href="blog.html">Blog</a></li>
+				<li><a href="index.html#contact">Contacto</a></li>
+			</ul>
+		</nav>
+
+		<!-- Sobre mí -->
+		<article id="top" class="wrapper style2">
+			<div class="container">
+				<header>
+					<h2>¿Quién soy?</h2>
+					<!-- Estadísticas de GitHub cargadas dinámicamente via API -->
+					<p id="github-stats">Cargando información...</p>
+				</header>
+				<div class="row aln-center">
+					<div class="col-4 col-6-medium col-12-small">
+						<section class="box style1">
+							<span class="icon featured fa-chart-line"></span>
+							<h3>Economista</h3>
+							<p>Analista de datos con experiencia en Stata y modelamiento cuantitativo aplicado al sector salud.</p>
+						</section>
+					</div>
+					<div class="col-4 col-6-medium col-12-small">
+						<section class="box style1">
+							<span class="icon solid featured fa-heartbeat"></span>
+							<h3>Health Tech</h3>
+							<p>Cofundador de Candel, empresa enfocada en la intersección entre tecnología y salud en Latinoamérica.</p>
+						</section>
+					</div>
+					<div class="col-4 col-6-medium col-12-small">
+						<section class="box style1">
+							<span class="icon featured fa-code"></span>
+							<h3>Aprendiz de código</h3>
+							<p>Aprendiendo programación web — HTML, CSS, JavaScript y GitHub Pages. Esta página es parte del proceso.</p>
+						</section>
+					</div>
+				</div>
+
+				<!-- Stats de GitHub -->
+				<div style="text-align:center; margin-top: 2em;">
+					<img
+						src="https://streak-stats.demolab.com?user=MuenaWWW&locale=es"
+						alt="Estadísticas GitHub de Sebastián"
+						style="max-width: 500px; width: 100%; border-radius: 8px;"
+						onerror="this.style.display='none'"
+					/>
+				</div>
+
+				<footer>
+					<!-- Botón toggle de información adicional -->
+					<button
+						onclick="mostrarMas()"
+						class="button large"
+					style="background-color: #9e9e9e; color: #1a1a1a; text-shadow: none;">
+						Saber más sobre mí
+					</button>
+					<!-- Botón parodia -->
+					<button
+						onclick="saludar()"
+						class="button large"
+						style="margin-left: 1em;">
+						No aprietes este botón
+					</button>
+					<!-- Contenedor para información adicional -->
+					<div id="mas-info" style="margin-top: 1.5em;"></div>
+				</footer>
+			</div>
+		</article>
+
+		<!-- Footer -->
+		<article class="wrapper style4">
+			<div class="container medium">
+				<footer>
+					<ul id="copyright">
+						<li>&copy; Sebastián Muena 2026.</li>
+						<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</footer>
+			</div>
+		</article>
+
+		<!-- Scripts del template -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+		<!-- Scripts personalizados -->
+		<script>
+			// =============================================
+			// 1. GITHUB API — Estadísticas del perfil
+			// =============================================
+			fetch('https://api.github.com/users/MuenaWWW')
+				.then(response => response.json())
+				.then(data => {
+					document.getElementById('github-stats').innerHTML =
+						`${data.public_repos} repositorios públicos · ${data.followers} seguidores en GitHub`;
+				})
+				.catch(() => {
+					document.getElementById('github-stats').innerHTML = '';
+				});
+
+			// =============================================
+			// 2. TOGGLE — Mostrar/ocultar información adicional
+			// =============================================
+			function mostrarMas() {
+				const contenedor = document.getElementById('mas-info');
+
+				if (contenedor.innerHTML === '') {
+					contenedor.innerHTML = `
+						<div style="background: rgba(255,255,255,0.1); border-radius: 8px; padding: 1.5em; color: #fff;">
+							<p>Me gustan los videojuegos, series y anime.
+							Estar en familia y seguir aprendiendo cada día.</p>
+						</div>
+					`;
+				} else {
+					contenedor.innerHTML = '';
+				}
+			}
+
+			// =============================================
+			// 3. PARODIA — Botón que no deberías apretar
+			// =============================================
+			function saludar() {
+				alert('DIJE QUE NO!!! -.-');
+			}
+		</script>
+
+	</body>
+</html>
