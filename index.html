@@ -1,196 +1,434 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<!--
+	Miniport by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+	Adaptado por Sebastián Muena — Marzo 2026
+-->
 <html>
-  <head>
-    <title>About me</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body class="max-w-3xl mx-auto px-8 py-12 bg-gray-50 text-gray-800">
+	<head>
+		<title>Sebastián Muena</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
 
-    <!-- Navegación principal -->
-    <nav class="mb-10">
-      <a href="index.html" class="text-blue-500 hover:text-blue-700 mr-6">Inicio</a>
-      <a href="proyectos.html" class="text-blue-500 hover:text-blue-700 mr-6">Proyectos</a>
-      <a href="blog.html" class="text-blue-500 hover:text-blue-700">Blog</a>
-    </nav>
+		<!-- Nav -->
+		<nav id="nav">
+			<ul class="container">
+				<li><a href="#top">Inicio</a></li>
+				<li><a href="#work">Sobre mí</a></li>
+				<li><a href="#portfolio">Proyectos</a></li>
+				<li><a href="#blog">Blog</a></li>
+				<li><a href="#contact">Contacto</a></li>
+			</ul>
+		</nav>
 
-    <!-- Foto de perfil cargada dinámicamente desde GitHub API -->
-    <div id="foto-perfil" class="mb-6"></div>
+		<!-- Home -->
+		<article id="top" class="wrapper style1">
+			<div class="container">
+				<div class="row">
+					<!-- Foto de perfil cargada dinámicamente desde GitHub API -->
+					<div class="col-4 col-5-large col-12-medium">
+						<span class="image fit">
+							<img id="foto-github" src="images/pic00.jpg" alt="Foto de perfil de Sebastián Muena" />
+						</span>
+					</div>
+					<div class="col-8 col-7-large col-12-medium">
+						<header>
+							<h1>Hola, soy <strong>Sebastián Muena</strong>.</h1>
+						</header>
+						<p>Padre, economista y cofundador de <strong>Candel</strong>. 
+						Apasionado por la intersección entre salud y tecnología.</p>
+						<a href="#work" class="button large scrolly">Conoce más sobre mí</a>
+					</div>
+				</div>
+			</div>
+		</article>
 
-    <!-- Título y descripción -->
-    <h1 class="text-4xl font-bold text-blue-900 border-b-4 border-blue-400 pb-4 mb-8">
-      Sebastián Muena
-    </h1>
-    <p class="text-lg text-gray-600 mb-12">Padre, economista y cofundador de Candel.</p>
+		<!-- Sobre mí -->
+		<article id="work" class="wrapper style2">
+			<div class="container">
+				<header>
+					<h2>¿Quién soy?</h2>
+					<!-- Estadísticas de GitHub cargadas dinámicamente via API -->
+					<p id="github-stats">Cargando información...</p>
+				</header>
+				<div class="row aln-center">
+					<div class="col-4 col-6-medium col-12-small">
+						<section class="box style1">
+							<span class="icon featured fa-chart-line"></span>
+							<h3>Economista</h3>
+							<p>Analista de datos con experiencia en Stata y modelamiento cuantitativo aplicado al sector salud.</p>
+						</section>
+					</div>
+					<div class="col-4 col-6-medium col-12-small">
+						<section class="box style1">
+							<span class="icon solid featured fa-heartbeat"></span>
+							<h3>Health Tech</h3>
+							<p>Cofundador de Candel, empresa enfocada en la intersección entre tecnología y salud en Latinoamérica.</p>
+						</section>
+					</div>
+					<div class="col-4 col-6-medium col-12-small">
+						<section class="box style1">
+							<span class="icon featured fa-code"></span>
+							<h3>Aprendiz de código</h3>
+							<p>Aprendiendo programación web — HTML, CSS, JavaScript y GitHub Pages. Esta página es parte del proceso.</p>
+						</section>
+					</div>
+				</div>
 
-    <!-- Sección Proyectos -->
-    <h2 class="text-2xl font-bold text-blue-700 mt-10 mb-4">Proyectos</h2>
+				<!-- Stats de GitHub -->
+				<div style="text-align:center; margin-top: 2em;">
+					<img 
+						src="https://streak-stats.demolab.com?user=MuenaWWW&locale=es" 
+						alt="Estadísticas GitHub de Sebastián"
+						style="max-width: 500px; width: 100%; border-radius: 8px;"
+						onerror="this.style.display='none'"
+					/>
+				</div>
 
-    <h3 class="text-lg font-semibold text-gray-700 mt-6">Ideas sector inmobiliario</h3>
-    <p class="text-gray-600">Apartado para consolidar proyectos individuales, personales</p>
+				<footer>
+					<!-- Botón toggle de información adicional -->
+					<button 
+						onclick="mostrarMas()" 
+						class="button large">
+						Saber más sobre mí
+					</button>
+					<!-- Botón parodia -->
+					<button 
+						onclick="saludar()" 
+						class="button large"
+						style="margin-left: 1em;">
+						No aprietes este botón
+					</button>
+					<!-- Contenedor para información adicional -->
+					<div id="mas-info" style="margin-top: 1.5em;"></div>
+				</footer>
+			</div>
+		</article>
 
-    <h3 class="text-lg font-semibold text-gray-700 mt-6">Juegos Amaro</h3>
-    <p class="text-gray-600">Juegos para Amaro</p>
+		<!-- Proyectos -->
+		<article id="portfolio" class="wrapper style3">
+			<div class="container">
+				<header>
+					<h2>Proyectos</h2>
+					<p>Ideas, experimentos y cosas que estoy construyendo.</p>
+				</header>
+				<div class="row">
 
-    <h3 class="text-lg font-semibold text-gray-700 mt-6">Libros recomendados</h3>
-    <p class="text-gray-600">The Hard Things About Hard Things - Ben Horowitz</p>
+					<!-- Proyecto 1 -->
+					<div class="col-4 col-6-medium col-12-small">
+						<article class="box style2">
+							<h3>Ideas sector inmobiliario</h3>
+							<p>Apartado para consolidar proyectos individuales y personales relacionados al sector.</p>
+						</article>
+					</div>
 
-    <!-- Sección Blog -->
-    <h2 class="text-2xl font-bold text-blue-700 mt-10 mb-4">Blog</h2>
-    <p class="text-gray-600">Próximamente...</p>
+					<!-- Proyecto 2 -->
+					<div class="col-4 col-6-medium col-12-small">
+						<article class="box style2">
+							<h3>Juegos Amaro</h3>
+							<p>Juegos y actividades para Amaro.</p>
+						</article>
+					</div>
 
-    <!-- Sección Contacto -->
-    <h2 class="text-2xl font-bold text-blue-700 mt-10 mb-4">Contacto</h2>
-    <h3 class="text-lg font-semibold text-gray-700 mt-6">Redes sociales</h3>
-    <p class="text-gray-600">Perfil personal:
-      <a href="https://www.linkedin.com/in/sebastian-muena-cortes/"
-         class="text-blue-500 underline hover:text-blue-700">LinkedIn</a>
-    </p>
+					<!-- Proyecto 3 -->
+					<div class="col-4 col-6-medium col-12-small">
+						<article class="box style2">
+							<h3>Libros recomendados</h3>
+							<p>The Hard Things About Hard Things — Ben Horowitz.</p>
+						</article>
+					</div>
 
-    <!-- Formulario de contacto conectado a Formspree -->
-    <h3 class="text-lg font-semibold text-gray-700 mt-8 mb-4">Envíame un mensaje</h3>
+				</div>
 
-    <!-- Mensaje de confirmación — oculto por defecto -->
-    <div id="confirmacion" class="hidden bg-green-50 border border-green-200 
-         rounded-lg p-4 mb-4">
-      <p class="text-green-700">¡Mensaje enviado! Te responderé pronto.</p>
-    </div>
+				<!-- Repositorios de GitHub cargados dinámicamente via API -->
+				<header style="margin-top: 3em;">
+					<h2>Repositorios en GitHub</h2>
+				</header>
+				<div id="repos" class="row">
+					<p>Cargando repositorios...</p>
+				</div>
 
-    <!-- Campos del formulario -->
-    <div class="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
+				<footer>
+					<a href="#blog" class="button large scrolly">Ver mi blog</a>
+				</footer>
+			</div>
+		</article>
 
-      <!-- Campo nombre -->
-      <div class="mb-4">
-        <label class="block text-sm font-semibold text-gray-700 mb-1">Nombre</label>
-        <input 
-          id="nombre"
-          type="text" 
-          placeholder="Tu nombre"
-          class="w-full border border-gray-300 rounded-lg px-4 py-2 
-                 text-gray-700 focus:outline-none focus:border-blue-400">
-      </div>
+		<!-- Blog -->
+		<article id="blog" class="wrapper style2">
+			<div class="container">
+				<header>
+					<h2>Blog</h2>
+					<p>Artículos sobre salud, tecnología y emprendimiento.</p>
+				</header>
 
-      <!-- Campo email -->
-      <div class="mb-4">
-        <label class="block text-sm font-semibold text-gray-700 mb-1">Email</label>
-        <input 
-          id="email"
-          type="email" 
-          placeholder="tu@email.com"
-          class="w-full border border-gray-300 rounded-lg px-4 py-2 
-                 text-gray-700 focus:outline-none focus:border-blue-400">
-      </div>
+				<div class="row aln-center">
 
-      <!-- Campo mensaje -->
-      <div class="mb-6">
-        <label class="block text-sm font-semibold text-gray-700 mb-1">Mensaje</label>
-        <textarea 
-          id="mensaje"
-          rows="4"
-          placeholder="¿En qué puedo ayudarte?"
-          class="w-full border border-gray-300 rounded-lg px-4 py-2 
-                 text-gray-700 focus:outline-none focus:border-blue-400">
-        </textarea>
-      </div>
+					<!-- ARTÍCULO 1 -->
+					<div class="col-6 col-12-medium">
+						<section class="box style1">
+							<h3>Personal Website Launch</h3>
+							<p style="font-size: 0.85em; color: #aaa;">Marzo 2026</p>
+							<p>Primer artículo del blog — el lanzamiento de esta página personal y el proceso de aprendizaje detrás de ella.</p>
+							<a href="https://healthtechcl.substack.com/p/personal-website-launch" 
+							   target="_blank" 
+							   class="button small">Leer en Substack →</a>
+						</section>
+					</div>
 
-      <!-- Botón enviar -->
-      <button
-        onclick="enviarFormulario()"
-        class="w-full px-6 py-3 bg-blue-600 text-white font-semibold 
-               rounded-lg hover:bg-blue-800">
-        Enviar mensaje
-      </button>
+					<!-- PLANTILLA PARA PRÓXIMOS ARTÍCULOS -->
+					<!-- Para agregar un artículo nuevo: copia este bloque,
+					     elimina los símbolos de comentario y rellena los datos -->
+					<!--
+					<div class="col-6 col-12-medium">
+						<section class="box style1">
+							<h3>Título del artículo</h3>
+							<p style="font-size: 0.85em; color: #aaa;">Mes Año</p>
+							<p>Preview del contenido...</p>
+							<a href="URL_DEL_ARTICULO_EN_SUBSTACK" target="_blank" class="button small">Leer en Substack →</a>
+						</section>
+					</div>
+					-->
 
-    </div>
+				</div>
 
-    <!-- Botones interactivos -->
-    <div class="flex gap-4 mt-10">
+				<!-- Embed oficial de suscripción a Substack -->
+				<div style="max-width: 500px; margin: 3em auto 0;">
+					<h3 style="text-align:center; margin-bottom: 1em;">Suscríbete al newsletter</h3>
+					<iframe
+						src="https://healthtechcl.substack.com/embed"
+						width="100%"
+						height="320"
+						style="border:1px solid #EEE; background:white; border-radius: 8px;"
+						frameborder="0"
+						scrolling="no">
+					</iframe>
+				</div>
 
-      <!-- Botón toggle de información -->
-      <button 
-        onclick="mostrarMensaje()"
-        class="px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-800">
-        Saber más sobre mí
-      </button>
+				<footer>
+					<a href="https://healthtechcl.substack.com" target="_blank" class="button large">
+						Ver todos los artículos en Substack →
+					</a>
+				</footer>
+			</div>
+		</article>
 
-      <!-- Botón parodia -->
-      <button 
-        onclick="saludar()"
-        class="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-800">
-        No aprietes este botón
-      </button>
+		<!-- Contacto -->
+		<article id="contact" class="wrapper style4">
+			<div class="container medium">
+				<header>
+					<h2>Contáctame</h2>
+					<p>¿Tienes un proyecto o quieres conversar? Escríbeme.</p>
+				</header>
+				<div class="row">
+					<div class="col-12">
 
-    </div>
+						<!-- Mensaje de confirmación — oculto por defecto -->
+						<div id="confirmacion" style="display:none; background:#e8f5e9; border: 1px solid #a5d6a7; border-radius: 8px; padding: 1em; margin-bottom: 1em;">
+							<p style="color: #2e7d32; margin: 0;">¡Mensaje enviado! Te responderé pronto.</p>
+						</div>
 
-    <!-- Contenedor vacío que se llenará con JavaScript -->
-    <div id="mas-info" class="mt-6"></div>
+						<!-- Formulario conectado a Formspree -->
+						<div class="row">
+							<div class="col-6 col-12-small">
+								<input type="text" id="nombre" placeholder="Nombre" />
+							</div>
+							<div class="col-6 col-12-small">
+								<input type="text" id="email" placeholder="Email" />
+							</div>
+							<div class="col-12">
+								<input type="text" id="asunto" placeholder="Asunto" />
+							</div>
+							<div class="col-12">
+								<textarea id="mensaje" placeholder="Mensaje"></textarea>
+							</div>
+							<div class="col-12">
+								<ul class="actions">
+									<li>
+										<button onclick="enviarFormulario()" class="button large">
+											Enviar mensaje
+										</button>
+									</li>
+									<li>
+										<button onclick="limpiarFormulario()" class="button alt large">
+											Limpiar
+										</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
 
-    <!-- Todo el JavaScript junto al final -->
-    <script>
-      // Carga foto de perfil desde GitHub API
-      fetch('https://api.github.com/users/MuenaWWW')
-        .then(response => response.json())
-        .then(data => {
-          document.getElementById('foto-perfil').innerHTML = `
-            <img 
-              src="${data.avatar_url}" 
-              alt="Foto de perfil de Sebastián"
-              class="w-24 h-24 rounded-full shadow-md"
-            />
-          `;
-        });
+					<!-- Redes sociales -->
+					<div class="col-12">
+						<hr />
+						<h3>Encuéntrame en...</h3>
+						<ul class="social">
+							<li>
+								<a href="https://www.linkedin.com/in/sebastian-muena-cortes/" 
+								   target="_blank"
+								   class="icon brands fa-linkedin-in">
+									<span class="label">LinkedIn</span>
+								</a>
+							</li>
+							<li>
+								<a href="https://github.com/MuenaWWW" 
+								   target="_blank"
+								   class="icon brands fa-github">
+									<span class="label">Github</span>
+								</a>
+							</li>
+							<li>
+								<a href="https://healthtechcl.substack.com" 
+								   target="_blank"
+								   class="icon solid fa-rss">
+									<span>Substack</span>
+								</a>
+							</li>
+						</ul>
+						<hr />
+					</div>
+				</div>
 
-      // Toggle — muestra u oculta información adicional
-      function mostrarMensaje() {
-        const contenedor = document.getElementById('mas-info');
-        if (contenedor.innerHTML === '') {
-          contenedor.innerHTML = `
-            <div class="bg-blue-50 border border-blue-200 rounded-lg p-6">
-              <p class="text-gray-700">Soy un apasionado por la intersección entre salud y 
-              tecnología. Me gustan los videojuegos, series y anime. Estar en familia y aprender.</p>
-            </div>
-          `;
-        } else {
-          contenedor.innerHTML = '';
-        }
-      }
+				<footer>
+					<ul id="copyright">
+						<li>&copy; Sebastián Muena 2026.</li>
+						<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</footer>
+			</div>
+		</article>
 
-      // Parodia — muestra alerta al hacer click
-      function saludar() {
-        alert('DIJE QUE NO!!! -.-');
-      }
+		<!-- Scripts del template -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 
-      // Envía el formulario a Formspree via fetch()
-      function enviarFormulario() {
-        const nombre  = document.getElementById('nombre').value;
-        const email   = document.getElementById('email').value;
-        const mensaje = document.getElementById('mensaje').value;
+		<!-- Scripts personalizados — todas las integraciones juntas al final -->
+		<script>
+			// =============================================
+			// 1. GITHUB API — Foto de perfil y estadísticas
+			// =============================================
+			fetch('https://api.github.com/users/MuenaWWW')
+				.then(response => response.json())
+				.then(data => {
+					// Reemplazamos la imagen placeholder con la foto real de GitHub
+					document.getElementById('foto-github').src = data.avatar_url;
 
-        // Validación — verifica que no haya campos vacíos
-        if (!nombre || !email || !mensaje) {
-          alert('Por favor completa todos los campos');
-          return;
-        }
+					// Mostramos estadísticas del perfil
+					document.getElementById('github-stats').innerHTML = 
+						`${data.public_repos} repositorios públicos · ${data.followers} seguidores en GitHub`;
+				})
+				.catch(() => {
+					// Si falla, ocultamos el mensaje de carga
+					document.getElementById('github-stats').innerHTML = '';
+				});
 
-        // Enviamos los datos a Formspree
-        fetch('https://formspree.io/f/xbdzloag', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ nombre, email, mensaje })
-        })
-        .then(response => {
-          if (response.ok) {
-            // Mostramos confirmación y limpiamos campos
-            document.getElementById('confirmacion').classList.remove('hidden');
-            document.getElementById('nombre').value   = '';
-            document.getElementById('email').value    = '';
-            document.getElementById('mensaje').value  = '';
-          }
-        })
-        .catch(() => {
-          alert('Hubo un error al enviar. Intenta más tarde.');
-        });
-      }
-    </script>
+			// =============================================
+			// 2. GITHUB API — Repositorios
+			// =============================================
+			fetch('https://api.github.com/users/MuenaWWW/repos?sort=updated')
+				.then(response => response.json())
+				.then(repos => {
+					const contenedor = document.getElementById('repos');
+					contenedor.innerHTML = '';
 
-  </body>
+					// Creamos una tarjeta por cada repositorio
+					repos.forEach(repo => {
+						const fecha = new Date(repo.updated_at)
+							.toLocaleDateString('es-CL', { year: 'numeric', month: 'long' });
+
+						contenedor.innerHTML += `
+							<div class="col-4 col-6-medium col-12-small">
+								<article class="box style2">
+									<h3><a href="${repo.html_url}" target="_blank">${repo.name}</a></h3>
+									<p>${repo.description || 'Sin descripción'}</p>
+									<p style="font-size: 0.8em; color: #aaa;">⭐ ${repo.stargazers_count} · ${fecha}</p>
+								</article>
+							</div>
+						`;
+					});
+				})
+				.catch(() => {
+					document.getElementById('repos').innerHTML = 
+						'<p>No se pudieron cargar los repositorios.</p>';
+				});
+
+			// =============================================
+			// 3. TOGGLE — Mostrar/ocultar información adicional
+			// =============================================
+			function mostrarMas() {
+				const contenedor = document.getElementById('mas-info');
+
+				// Si está vacío muestra el contenido — si no, lo oculta
+				if (contenedor.innerHTML === '') {
+					contenedor.innerHTML = `
+						<div style="background: rgba(255,255,255,0.1); border-radius: 8px; padding: 1.5em; color: #fff;">
+							<p>Me gustan los videojuegos, series y anime. 
+							Estar en familia y seguir aprendiendo cada día.</p>
+						</div>
+					`;
+				} else {
+					contenedor.innerHTML = '';
+				}
+			}
+
+			// =============================================
+			// 4. PARODIA — Botón que no deberías apretar
+			// =============================================
+			function saludar() {
+				alert('DIJE QUE NO!!! -.-');
+			}
+
+			// =============================================
+			// 5. FORMULARIO — Envío via Formspree
+			// =============================================
+			function enviarFormulario() {
+				// Capturamos los valores de cada campo
+				const nombre  = document.getElementById('nombre').value;
+				const email   = document.getElementById('email').value;
+				const asunto  = document.getElementById('asunto').value;
+				const mensaje = document.getElementById('mensaje').value;
+
+				// Validación — verificamos que no haya campos vacíos
+				if (!nombre || !email || !mensaje) {
+					alert('Por favor completa nombre, email y mensaje');
+					return; // Detiene la función si falta algún campo
+				}
+
+				// Enviamos los datos a Formspree via fetch()
+				fetch('https://formspree.io/f/xbdzloag', {
+					method: 'POST',
+					headers: { 'Content-Type': 'application/json' },
+					body: JSON.stringify({ nombre, email, asunto, mensaje })
+				})
+				.then(response => {
+					if (response.ok) {
+						// Mostramos confirmación y limpiamos el formulario
+						document.getElementById('confirmacion').style.display = 'block';
+						limpiarFormulario();
+					}
+				})
+				.catch(() => {
+					alert('Hubo un error al enviar. Intenta más tarde.');
+				});
+			}
+
+			// Limpia todos los campos del formulario
+			function limpiarFormulario() {
+				document.getElementById('nombre').value  = '';
+				document.getElementById('email').value   = '';
+				document.getElementById('asunto').value  = '';
+				document.getElementById('mensaje').value = '';
+			}
+		</script>
+
+	</body>
 </html>
