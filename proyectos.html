@@ -5,11 +5,15 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 	Adaptado por Sebastián Muena — Marzo 2026
 -->
-<html>
+<html lang="es">
 	<head>
 		<title>Proyectos — Sebastián Muena</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Proyectos de Sebastián Muena — Candel Medical, CandelStim y más iniciativas en healthtech y tecnología." />
+		<meta property="og:title" content="Proyectos — Sebastián Muena" />
+		<meta property="og:description" content="Candel Medical, CandelStim y otras iniciativas de Sebastián Muena en healthtech." />
+		<meta property="og:type" content="website" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
 	<body class="is-preload">
@@ -17,44 +21,59 @@
 		<!-- Nav -->
 		<nav id="nav">
 			<ul class="container">
-				<li><a href="index.html">Inicio</a></li>
-				<li><a href="sobre-mi.html">Sobre mí</a></li>
-				<li><a href="proyectos.html">Proyectos</a></li>
+				<li><a href="index.html" data-es="Inicio" data-en="Home">Inicio</a></li>
+				<li><a href="sobre-mi.html" data-es="Sobre mí" data-en="About">Sobre mí</a></li>
+				<li><a href="proyectos.html" data-es="Proyectos" data-en="Projects">Proyectos</a></li>
 				<li><a href="blog.html">Blog</a></li>
-				<li><a href="index.html#contact">Contacto</a></li>
+				<li><a href="index.html#contact" data-es="Contacto" data-en="Contact">Contacto</a></li>
+				<li><a href="#" id="lang-toggle" onclick="toggleLang(); return false;" style="font-weight:700; letter-spacing:0.05em;">EN</a></li>
 			</ul>
 		</nav>
 
-		<!-- Proyectos personales -->
+		<!-- Proyectos -->
 		<article id="top" class="wrapper style3">
 			<div class="container">
 				<header>
-					<h2>Proyectos</h2>
-					<p>Ideas, experimentos y cosas que estoy construyendo.</p>
+					<h2 data-es="Proyectos" data-en="Projects">Proyectos</h2>
+					<p data-es="Iniciativas en las que estoy trabajando o he participado." data-en="Initiatives I'm working on or have been part of.">
+						Iniciativas en las que estoy trabajando o he participado.
+					</p>
 				</header>
 				<div class="row">
 
-					<!-- Proyecto 1 -->
+					<!-- Proyecto 1: Candel Medical -->
 					<div class="col-4 col-6-medium col-12-small">
 						<article class="box style2">
-							<h3>Ideas sector inmobiliario</h3>
-							<p>Apartado para consolidar proyectos individuales y personales relacionados al sector.</p>
+							<span class="icon solid featured fa-hospital"></span>
+							<h3><a href="https://candel.cl" target="_blank">Candel Medical</a></h3>
+							<p data-es="Startup de medtech fundada en 2021. Desarrollamos soluciones de neuromodulación eléctrica no invasiva (NIBS) para el mercado latinoamericano."
+							   data-en="Medtech startup founded in 2021. We develop non-invasive electrical neuromodulation (NIBS) solutions for the Latin American market.">
+								Startup de medtech fundada en 2021. Desarrollamos soluciones de neuromodulación eléctrica no invasiva (NIBS) para el mercado latinoamericano.
+							</p>
 						</article>
 					</div>
 
-					<!-- Proyecto 2 -->
+					<!-- Proyecto 2: CandelStim -->
 					<div class="col-4 col-6-medium col-12-small">
 						<article class="box style2">
-							<h3>Juegos Amaro</h3>
-							<p>Juegos y actividades para Amaro.</p>
+							<span class="icon solid featured fa-bolt"></span>
+							<h3>CandelStim</h3>
+							<p data-es="Dispositivo médico de neuromodulación eléctrica para el tratamiento del dolor crónico y rehabilitación. Reconocido en GS1 Day 2025."
+							   data-en="Electrical neuromodulation medical device for chronic pain treatment and rehabilitation. Recognized at GS1 Day 2025.">
+								Dispositivo médico de neuromodulación eléctrica para el tratamiento del dolor crónico y rehabilitación. Reconocido en GS1 Day 2025.
+							</p>
 						</article>
 					</div>
 
-					<!-- Proyecto 3 -->
+					<!-- Proyecto 3: Placeholder para próximo proyecto -->
 					<div class="col-4 col-6-medium col-12-small">
 						<article class="box style2">
-							<h3>Libros recomendados</h3>
-							<p>The Hard Things About Hard Things — Ben Horowitz.</p>
+							<span class="icon solid featured fa-lightbulb"></span>
+							<h3 data-es="Próximamente" data-en="Coming soon">Próximamente</h3>
+							<p data-es="Nuevos proyectos en desarrollo. ¿Tienes una idea? Conversemos."
+							   data-en="New projects in development. Have an idea? Let's talk.">
+								Nuevos proyectos en desarrollo. ¿Tienes una idea? Conversemos.
+							</p>
 						</article>
 					</div>
 
@@ -62,14 +81,14 @@
 
 				<!-- Repositorios de GitHub cargados dinámicamente via API -->
 				<header style="margin-top: 3em;">
-					<h2>Repositorios en GitHub</h2>
+					<h2 data-es="Repositorios en GitHub" data-en="GitHub Repositories">Repositorios en GitHub</h2>
 				</header>
 				<div id="repos" class="row">
-					<p>Cargando repositorios...</p>
+					<p data-es="Cargando repositorios..." data-en="Loading repositories...">Cargando repositorios...</p>
 				</div>
 
 				<footer>
-					<a href="blog.html" class="button large">Ver mi blog</a>
+					<a href="blog.html" class="button large" data-es="Ver mi blog" data-en="Read my blog">Ver mi blog</a>
 				</footer>
 			</div>
 		</article>
@@ -93,6 +112,7 @@
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
+		<script src="assets/js/lang.js"></script>
 
 		<!-- Scripts personalizados -->
 		<script>
@@ -105,7 +125,6 @@
 					const contenedor = document.getElementById('repos');
 					contenedor.innerHTML = '';
 
-					// Creamos una tarjeta por cada repositorio
 					repos.forEach(repo => {
 						const fecha = new Date(repo.updated_at)
 							.toLocaleDateString('es-CL', { year: 'numeric', month: 'long' });

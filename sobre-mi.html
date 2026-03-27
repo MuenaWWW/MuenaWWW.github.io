@@ -5,11 +5,15 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 	Adaptado por Sebastián Muena — Marzo 2026
 -->
-<html>
+<html lang="es">
 	<head>
 		<title>Sobre mí — Sebastián Muena</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Sobre Sebastián Muena — Economista, cofundador de Candel Medical y emprendedor en healthtech." />
+		<meta property="og:title" content="Sobre mí — Sebastián Muena" />
+		<meta property="og:description" content="Economista, fundador en healthtech e inversor ángel. Conoce más sobre Sebastián Muena." />
+		<meta property="og:type" content="website" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
 	<body class="is-preload">
@@ -17,11 +21,12 @@
 		<!-- Nav -->
 		<nav id="nav">
 			<ul class="container">
-				<li><a href="index.html">Inicio</a></li>
-				<li><a href="sobre-mi.html">Sobre mí</a></li>
-				<li><a href="proyectos.html">Proyectos</a></li>
+				<li><a href="index.html" data-es="Inicio" data-en="Home">Inicio</a></li>
+				<li><a href="sobre-mi.html" data-es="Sobre mí" data-en="About">Sobre mí</a></li>
+				<li><a href="proyectos.html" data-es="Proyectos" data-en="Projects">Proyectos</a></li>
 				<li><a href="blog.html">Blog</a></li>
-				<li><a href="index.html#contact">Contacto</a></li>
+				<li><a href="index.html#contact" data-es="Contacto" data-en="Contact">Contacto</a></li>
+				<li><a href="#" id="lang-toggle" onclick="toggleLang(); return false;" style="font-weight:700; letter-spacing:0.05em;">EN</a></li>
 			</ul>
 		</nav>
 
@@ -29,32 +34,45 @@
 		<article id="top" class="wrapper style2">
 			<div class="container">
 				<header>
-					<h2>¿Quién soy?</h2>
+					<h2 data-es="¿Quién soy?" data-en="Who am I?">¿Quién soy?</h2>
 					<!-- Estadísticas de GitHub cargadas dinámicamente via API -->
 					<p id="github-stats">Cargando información...</p>
 				</header>
 				<div class="row aln-center">
+
 					<div class="col-4 col-6-medium col-12-small">
 						<section class="box style1">
 							<span class="icon featured fa-chart-line"></span>
-							<h3>Economista</h3>
-							<p>Analista de datos con experiencia en Stata y modelamiento cuantitativo aplicado al sector salud.</p>
+							<h3 data-es="Economista" data-en="Economist">Economista</h3>
+							<p data-es="Modelamiento cuantitativo, finanzas y estrategia aplicados al sector salud y tecnología."
+							   data-en="Quantitative modeling, finance and strategy applied to the health and technology sectors.">
+								Modelamiento cuantitativo, finanzas y estrategia aplicados al sector salud y tecnología.
+							</p>
 						</section>
 					</div>
+
 					<div class="col-4 col-6-medium col-12-small">
 						<section class="box style1">
 							<span class="icon solid featured fa-heartbeat"></span>
-							<h3>Health Tech</h3>
-							<p>Cofundador de Candel, empresa enfocada en la intersección entre tecnología y salud en Latinoamérica.</p>
+							<h3 data-es="Fundador Healthtech" data-en="Healthtech Founder">Fundador Healthtech</h3>
+							<p data-es="Cofundador de Candel Medical, empresa de neuromodulación eléctrica no invasiva para el mercado latinoamericano."
+							   data-en="Co-founder of Candel Medical, a non-invasive electrical neuromodulation company for the Latin American market.">
+								Cofundador de Candel Medical, empresa de neuromodulación eléctrica no invasiva para el mercado latinoamericano.
+							</p>
 						</section>
 					</div>
+
 					<div class="col-4 col-6-medium col-12-small">
 						<section class="box style1">
-							<span class="icon featured fa-code"></span>
-							<h3>Aprendiz de código</h3>
-							<p>Aprendiendo programación web — HTML, CSS, JavaScript y GitHub Pages. Esta página es parte del proceso.</p>
+							<span class="icon solid featured fa-seedling"></span>
+							<h3 data-es="Inversor Ángel" data-en="Angel Investor">Inversor Ángel</h3>
+							<p data-es="Interesado en startups de impacto en salud, tecnología y sostenibilidad en Latinoamérica."
+							   data-en="Interested in impact startups in health, technology and sustainability in Latin America.">
+								Interesado en startups de impacto en salud, tecnología y sostenibilidad en Latinoamérica.
+							</p>
 						</section>
 					</div>
+
 				</div>
 
 				<!-- Stats de GitHub -->
@@ -68,22 +86,27 @@
 				</div>
 
 				<footer>
-					<!-- Botón toggle de información adicional -->
+					<!-- Botón: más sobre mí -->
 					<button
 						onclick="mostrarMas()"
 						class="button large"
-					style="background-color: #9e9e9e; color: #1a1a1a; text-shadow: none;">
+						data-es="Saber más sobre mí"
+						data-en="More about me"
+						style="background-color: #9e9e9e; color: #1a1a1a; text-shadow: none;">
 						Saber más sobre mí
 					</button>
-					<!-- Botón parodia -->
+					<!-- Easter egg legado -->
 					<button
-						onclick="saludar()"
+						onclick="easterEgg()"
 						class="button large"
+						data-es="No aprietes este botón"
+						data-en="Don't press this button"
 						style="margin-left: 1em;">
 						No aprietes este botón
 					</button>
-					<!-- Contenedor para información adicional -->
+					<!-- Contenedores -->
 					<div id="mas-info" style="margin-top: 1.5em;"></div>
+					<div id="easter-egg-card" style="display:none; margin-top: 1.5em;"></div>
 				</footer>
 			</div>
 		</article>
@@ -107,6 +130,7 @@
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
+		<script src="assets/js/lang.js"></script>
 
 		<!-- Scripts personalizados -->
 		<script>
@@ -142,10 +166,54 @@
 			}
 
 			// =============================================
-			// 3. PARODIA — Botón que no deberías apretar
+			// 3. EASTER EGG — Versión mejorada con tarjeta
 			// =============================================
-			function saludar() {
-				alert('DIJE QUE NO!!! -.-');
+			const easterEggFacts = [
+				'🎮 Jugué más de 1.000 horas de videojuegos antes de fundar una empresa.',
+				'📚 El libro que más me ha marcado: "The Hard Thing About Hard Things" — Ben Horowitz.',
+				'🧠 Candel nació de una conversación sobre por qué la neuroestimulación no era accesible.',
+				'☕ Tomo más café del que debería admitir públicamente.',
+				'👶 Ser padre es el proyecto más importante que tengo.'
+			];
+
+			let easterEggOpen = false;
+			let easterEggIndex = 0;
+
+			function easterEgg() {
+				const card = document.getElementById('easter-egg-card');
+
+				if (!easterEggOpen) {
+					card.style.display = 'block';
+					card.style.opacity = '0';
+					card.style.transition = 'opacity 0.4s ease';
+					card.innerHTML = `
+						<div style="background: rgba(255,255,255,0.12); border-left: 4px solid #49bf9d; border-radius: 8px; padding: 1.5em; color: #fff; max-width: 480px; margin: 0 auto; cursor: pointer;"
+						     onclick="siguienteFact()"
+						     title="Haz clic para ver otro">
+							<p style="margin:0; font-size: 1em;" id="fact-text">${easterEggFacts[easterEggIndex]}</p>
+							<p style="margin: 0.8em 0 0; font-size: 0.75em; opacity: 0.6;">Haz clic para ver otro →</p>
+						</div>
+					`;
+					setTimeout(() => { card.style.opacity = '1'; }, 10);
+					easterEggOpen = true;
+				} else {
+					card.style.opacity = '0';
+					setTimeout(() => {
+						card.style.display = 'none';
+						easterEggOpen = false;
+					}, 400);
+				}
+			}
+
+			function siguienteFact() {
+				easterEggIndex = (easterEggIndex + 1) % easterEggFacts.length;
+				const factText = document.getElementById('fact-text');
+				factText.style.opacity = '0';
+				setTimeout(() => {
+					factText.textContent = easterEggFacts[easterEggIndex];
+					factText.style.transition = 'opacity 0.3s ease';
+					factText.style.opacity = '1';
+				}, 200);
 			}
 		</script>
 

@@ -5,11 +5,15 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 	Adaptado por Sebastián Muena — Marzo 2026
 -->
-<html>
+<html lang="es">
 	<head>
 		<title>Blog — Sebastián Muena</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Blog de Sebastián Muena — Artículos sobre salud, tecnología y emprendimiento en Latinoamérica." />
+		<meta property="og:title" content="Blog — Sebastián Muena" />
+		<meta property="og:description" content="Artículos sobre healthtech, emprendimiento y tecnología por Sebastián Muena." />
+		<meta property="og:type" content="website" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
 	<body class="is-preload">
@@ -17,11 +21,12 @@
 		<!-- Nav -->
 		<nav id="nav">
 			<ul class="container">
-				<li><a href="index.html">Inicio</a></li>
-				<li><a href="sobre-mi.html">Sobre mí</a></li>
-				<li><a href="proyectos.html">Proyectos</a></li>
+				<li><a href="index.html" data-es="Inicio" data-en="Home">Inicio</a></li>
+				<li><a href="sobre-mi.html" data-es="Sobre mí" data-en="About">Sobre mí</a></li>
+				<li><a href="proyectos.html" data-es="Proyectos" data-en="Projects">Proyectos</a></li>
 				<li><a href="blog.html">Blog</a></li>
-				<li><a href="index.html#contact">Contacto</a></li>
+				<li><a href="index.html#contact" data-es="Contacto" data-en="Contact">Contacto</a></li>
+				<li><a href="#" id="lang-toggle" onclick="toggleLang(); return false;" style="font-weight:700; letter-spacing:0.05em;">EN</a></li>
 			</ul>
 		</nav>
 
@@ -30,7 +35,9 @@
 			<div class="container">
 				<header>
 					<h2>Blog</h2>
-					<p>Artículos sobre salud, tecnología y emprendimiento.</p>
+					<p data-es="Artículos sobre salud, tecnología y emprendimiento." data-en="Articles on health, technology and entrepreneurship.">
+						Artículos sobre salud, tecnología y emprendimiento.
+					</p>
 				</header>
 
 				<div class="row aln-center">
@@ -39,11 +46,16 @@
 					<div class="col-6 col-12-medium">
 						<section class="box style1">
 							<h3>Personal Website Launch</h3>
-							<p style="font-size: 0.85em; color: #aaa;">Marzo 2026</p>
-							<p>Primer artículo del blog — el lanzamiento de esta página personal y el proceso de aprendizaje detrás de ella.</p>
+							<p style="font-size: 0.85em; color: #aaa;" data-es="Marzo 2026" data-en="March 2026">Marzo 2026</p>
+							<p data-es="Primer artículo del blog — el lanzamiento de esta página personal y el proceso de aprendizaje detrás de ella."
+							   data-en="First blog post — the launch of this personal page and the learning process behind it.">
+								Primer artículo del blog — el lanzamiento de esta página personal y el proceso de aprendizaje detrás de ella.
+							</p>
 							<a href="https://healthtechcl.substack.com/p/personal-website-launch"
 							   target="_blank"
-							   class="button small">Leer en Substack →</a>
+							   class="button small"
+							   data-es="Leer en Substack →"
+							   data-en="Read on Substack →">Leer en Substack →</a>
 						</section>
 					</div>
 
@@ -54,9 +66,10 @@
 					<div class="col-6 col-12-medium">
 						<section class="box style1">
 							<h3>Título del artículo</h3>
-							<p style="font-size: 0.85em; color: #aaa;">Mes Año</p>
-							<p>Preview del contenido...</p>
-							<a href="URL_DEL_ARTICULO_EN_SUBSTACK" target="_blank" class="button small">Leer en Substack →</a>
+							<p style="font-size: 0.85em; color: #aaa;" data-es="Mes Año" data-en="Month Year">Mes Año</p>
+							<p data-es="Preview en español..." data-en="English preview...">Preview del contenido...</p>
+							<a href="URL_DEL_ARTICULO_EN_SUBSTACK" target="_blank" class="button small"
+							   data-es="Leer en Substack →" data-en="Read on Substack →">Leer en Substack →</a>
 						</section>
 					</div>
 					-->
@@ -65,7 +78,9 @@
 
 				<!-- Embed oficial de suscripción a Substack -->
 				<div style="max-width: 500px; margin: 3em auto 0;">
-					<h3 style="text-align:center; margin-bottom: 1em;">Suscríbete al newsletter</h3>
+					<h3 style="text-align:center; margin-bottom: 1em;" data-es="Suscríbete al newsletter" data-en="Subscribe to the newsletter">
+						Suscríbete al newsletter
+					</h3>
 					<iframe
 						src="https://healthtechcl.substack.com/embed"
 						width="100%"
@@ -77,7 +92,9 @@
 				</div>
 
 				<footer>
-					<a href="https://healthtechcl.substack.com" target="_blank" class="button large">
+					<a href="https://healthtechcl.substack.com" target="_blank" class="button large"
+					   data-es="Ver todos los artículos en Substack →"
+					   data-en="View all articles on Substack →">
 						Ver todos los artículos en Substack →
 					</a>
 				</footer>
@@ -103,6 +120,7 @@
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
 		<script src="assets/js/main.js"></script>
+		<script src="assets/js/lang.js"></script>
 
 	</body>
 </html>
