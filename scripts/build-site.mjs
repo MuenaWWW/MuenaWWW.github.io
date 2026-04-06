@@ -126,7 +126,7 @@ function pageSummaryCard(pageKey, lang) {
   if (pageKey === 'about') {
     return `
       <div class="mini-card">
-        <strong>${lang === 'es' ? 'Areas de trabajo' : 'Focus areas'}</strong>
+        <strong>${lang === 'es' ? 'Áreas de trabajo' : 'Focus areas'}</strong>
         <p>${lang === 'es' ? 'Healthtech, operaciones, estrategia y crecimiento.' : 'Healthtech, operations, strategy, and growth.'}</p>
       </div>
       <div class="mini-card">
@@ -139,12 +139,12 @@ function pageSummaryCard(pageKey, lang) {
   if (pageKey === 'projects') {
     return `
       <div class="mini-card">
-        <strong>${lang === 'es' ? 'Criterio de seleccion' : 'Selection criteria'}</strong>
+        <strong>${lang === 'es' ? 'Criterio de selección' : 'Selection criteria'}</strong>
         <p>${lang === 'es' ? 'Solo muestro frentes que representen bien el tipo de trabajo que me interesa construir.' : 'I only show workstreams that represent the type of work I care about building.'}</p>
       </div>
       <div class="mini-card">
         <strong>${lang === 'es' ? 'Stack del sitio' : 'Site stack'}</strong>
-        <p>${lang === 'es' ? 'Sitio estatico, contenido curado y despliegue simple.' : 'Static site, curated content, and simple deployment.'}</p>
+        <p>${lang === 'es' ? 'Sitio estático, contenido curado y despliegue simple.' : 'Static site, curated content, and simple deployment.'}</p>
       </div>
     `;
   }
@@ -315,9 +315,9 @@ function renderHome(lang) {
         <div class="section__header">
           <div>
             <div class="section__eyebrow">${lang === 'es' ? 'Enfoque' : 'Focus'}</div>
-            <h2 id="highlights-title">${lang === 'es' ? 'Donde concentro energia y criterio.' : 'Where I focus energy and judgment.'}</h2>
+            <h2 id="highlights-title">${lang === 'es' ? 'Dónde concentro energía y criterio.' : 'Where I focus energy and judgment.'}</h2>
           </div>
-          <p class="section__description">${lang === 'es' ? 'Mi trabajo combina operacion, estrategia y una lectura muy concreta del contexto latinoamericano.' : 'My work combines operations, strategy, and a grounded reading of the Latin American context.'}</p>
+          <p class="section__description">${lang === 'es' ? 'Mi trabajo combina operación, estrategia y una lectura muy concreta del contexto latinoamericano.' : 'My work combines operations, strategy, and a grounded reading of the Latin American context.'}</p>
         </div>
         <div class="grid grid--3">
           ${highlightCards}
@@ -341,7 +341,7 @@ function renderHome(lang) {
         <div class="section__header">
           <div>
             <div class="section__eyebrow">${lang === 'es' ? 'Reconocimientos' : 'Recognition'}</div>
-            <h2 id="recognition-title">${lang === 'es' ? 'Validacion externa del trabajo en marcha.' : 'External validation for the work in motion.'}</h2>
+            <h2 id="recognition-title">${lang === 'es' ? 'Validación externa del trabajo en marcha.' : 'External validation for the work in motion.'}</h2>
           </div>
           <p class="section__description">${lang === 'es' ? 'Premios, programas y apoyos que han acompañado el desarrollo de Candel Medical.' : 'Awards, programs, and support that have accompanied the development of Candel Medical.'}</p>
         </div>
@@ -475,7 +475,7 @@ function renderAbout(lang) {
             <div class="section__eyebrow">${lang === 'es' ? 'Pilares' : 'Pillars'}</div>
             <h2 id="pillars-title">${lang === 'es' ? 'Tres ejes que organizan mi trabajo.' : 'Three pillars that organize my work.'}</h2>
           </div>
-          <p class="section__description">${lang === 'es' ? 'Mas que una lista de cargos, esto resume donde intento aportar mayor valor.' : 'More than a list of titles, this describes where I try to create the most value.'}</p>
+          <p class="section__description">${lang === 'es' ? 'Más que una lista de cargos, esto resume dónde intento aportar mayor valor.' : 'More than a list of titles, this describes where I try to create the most value.'}</p>
         </div>
         <div class="grid grid--3">
           ${pillarCards}
@@ -567,7 +567,7 @@ function renderProjects(lang) {
             <div class="section__eyebrow">${lang === 'es' ? 'Selección principal' : 'Featured selection'}</div>
             <h2 id="featured-projects-title">${lang === 'es' ? 'Tres proyectos, tres formas de construir.' : 'Three projects, three ways of building.'}</h2>
           </div>
-          <p class="section__description">${lang === 'es' ? 'La idea no es mostrar cantidad, sino dejar claro que tipo de problemas me interesa resolver.' : 'The goal is not volume, but clarity around the type of problems I want to solve.'}</p>
+          <p class="section__description">${lang === 'es' ? 'La idea no es mostrar cantidad, sino dejar claro qué tipo de problemas me interesa resolver.' : 'The goal is not volume, but clarity around the type of problems I want to solve.'}</p>
         </div>
         <div class="grid grid--3">
           ${featured}
@@ -580,7 +580,7 @@ function renderProjects(lang) {
             <div class="section__eyebrow">${lang === 'es' ? 'Canales' : 'Channels'}</div>
             <h2 id="follow-work-title">${escapeHtml(page.selection.heading[lang])}</h2>
           </div>
-          <p class="section__description">${lang === 'es' ? 'Si quieres seguir el trabajo, estos son los puntos mas utiles.' : 'If you want to follow the work, these are the most useful places to start.'}</p>
+          <p class="section__description">${lang === 'es' ? 'Si quieres seguir el trabajo, estos son los puntos más útiles.' : 'If you want to follow the work, these are the most useful places to start.'}</p>
         </div>
         <div class="grid grid--3">
           ${selection}
@@ -638,8 +638,8 @@ function renderBlog(lang) {
       <section class="section" aria-labelledby="latest-post-title">
         <div class="section__header">
           <div>
-            <div class="section__eyebrow">${lang === 'es' ? 'Ultimo texto' : 'Latest essay'}</div>
-            <h2 id="latest-post-title">${lang === 'es' ? 'Lo mas reciente publicado.' : 'The most recent piece published.'}</h2>
+            <div class="section__eyebrow">${lang === 'es' ? 'Último texto' : 'Latest essay'}</div>
+            <h2 id="latest-post-title">${lang === 'es' ? 'Lo más reciente publicado.' : 'The most recent piece published.'}</h2>
           </div>
           <p class="section__description">${lang === 'es' ? 'La mayor parte de la escritura vive en Substack, donde mantengo la publicación principal.' : 'Most writing lives on Substack, where I keep the main publication.'}</p>
         </div>
@@ -664,7 +664,7 @@ function renderBlog(lang) {
             <div class="section__eyebrow">${lang === 'es' ? 'Temas' : 'Topics'}</div>
             <h2 id="topics-title">${lang === 'es' ? 'Las conversaciones que me interesa sostener.' : 'The conversations I want to keep having.'}</h2>
           </div>
-          <p class="section__description">${lang === 'es' ? 'Temas recurrentes en la escritura y en las notas que seguiran apareciendo.' : 'Recurring themes in the essays and notes I plan to keep publishing.'}</p>
+          <p class="section__description">${lang === 'es' ? 'Temas recurrentes en la escritura y en las notas que seguirán apareciendo.' : 'Recurring themes in the essays and notes I plan to keep publishing.'}</p>
         </div>
         <div class="grid grid--3">
           ${topics}
@@ -682,7 +682,7 @@ function render404(lang = 'es') {
           <div class="page-heading__copy">
             <div class="section__eyebrow">404</div>
             <h1>${lang === 'es' ? 'Esta página no existe o cambió de lugar.' : 'This page does not exist or has moved.'}</h1>
-            <p class="lead">${lang === 'es' ? 'Puedes volver al inicio y seguir navegando desde ahi.' : 'You can return to the homepage and continue from there.'}</p>
+            <p class="lead">${lang === 'es' ? 'Puedes volver al inicio y seguir navegando desde ahí.' : 'You can return to the homepage and continue from there.'}</p>
             <div class="hero__actions">
               <a class="button" href="${publicHref('home', lang)}">${lang === 'es' ? 'Volver al inicio' : 'Back to home'} ${icon('arrow')}</a>
             </div>

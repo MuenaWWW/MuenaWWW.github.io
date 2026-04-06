@@ -366,7 +366,7 @@ export const site = {
             en: 'A medical device aimed at chronic pain treatment and rehabilitation, with a value proposition built for real-world access and adoption.'
           },
           tags: {
-            es: ['Producto', 'Dispositivo medico', 'Go-to-market'],
+            es: ['Producto', 'Dispositivo médico', 'Go-to-market'],
             en: ['Product', 'Medical device', 'Go-to-market']
           }
         },
@@ -382,7 +382,7 @@ export const site = {
             en: 'This site was rebuilt as a curated static foundation to present work, publish consistently, and scale bilingual content without friction.'
           },
           tags: {
-            es: ['Brand personal', 'Static site', 'Bilingüe'],
+            es: ['Marca personal', 'Static site', 'Bilingüe'],
             en: ['Personal brand', 'Static site', 'Bilingual']
           }
         }
@@ -458,7 +458,7 @@ export const site = {
             en: 'March 2026'
           },
           excerpt: {
-            es: 'El lanzamiento de este sitio y el proceso de aprendizaje detrás de convertirlo en una presencia digital más clara y durable.',
+            es: 'El lanzamiento de este sitio y el proceso de aprendizaje detrás de convertirlo en una presencia digital más clara y duradera.',
             en: 'The launch of this site and the learning process behind turning it into a clearer, more durable digital presence.'
           },
           href: 'https://healthtechcl.substack.com/p/personal-website-launch'
@@ -494,7 +494,7 @@ export const site = {
             en: 'Thinking in public'
           },
           body: {
-            es: 'Notas para convertir experiencia practica en criterio compartible.',
+            es: 'Notas para convertir experiencia práctica en criterio compartible.',
             en: 'Notes that turn practical experience into shareable judgment.'
           }
         }
