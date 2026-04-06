@@ -1,7 +1,7 @@
 const translations = {
   es: {
-    menuOpen: 'Abrir menu',
-    menuClose: 'Cerrar menu',
+    menuOpen: 'Abrir menú',
+    menuClose: 'Cerrar menú',
     sending: 'Enviando mensaje...',
     success: 'Gracias. Tu mensaje fue enviado correctamente.',
     error: 'No fue posible enviar el mensaje. Intenta nuevamente en unos minutos.',
@@ -50,6 +50,47 @@ function setupNavigation() {
   });
 }
 
+function setupHeaderState() {
+  const header = document.querySelector('[data-site-header]');
+  if (!header) return;
+
+  const updateScrolled = () => {
+    header.dataset.scrolled = window.scrollY > 12 ? 'true' : 'false';
+  };
+
+  updateScrolled();
+  window.addEventListener('scroll', updateScrolled, { passive: true });
+}
+
+function setupRevealMotion() {
+  const revealables = document.querySelectorAll('[data-reveal]');
+  if (!revealables.length) return;
+
+  if (!('IntersectionObserver' in window)) {
+    revealables.forEach((element) => element.classList.add('is-visible'));
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+
+        const delay = Number(entry.target.getAttribute('data-reveal-delay') || '0');
+        entry.target.style.setProperty('--reveal-delay', `${delay}ms`);
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      });
+    },
+    {
+      threshold: 0.16,
+      rootMargin: '0px 0px -6% 0px'
+    }
+  );
+
+  revealables.forEach((element) => observer.observe(element));
+}
+
 function setupContactForm() {
   const form = document.querySelector('[data-contact-form]');
   if (!form) return;
@@ -62,6 +103,11 @@ function setupContactForm() {
     status.dataset.state = state;
     status.hidden = false;
   };
+
+  form.addEventListener('reset', () => {
+    status.hidden = true;
+    status.textContent = '';
+  });
 
   form.addEventListener('submit', async (event) => {
     event.preventDefault();
@@ -107,5 +153,6 @@ function setupContactForm() {
 }
 
 setupNavigation();
+setupHeaderState();
+setupRevealMotion();
 setupContactForm();
-
