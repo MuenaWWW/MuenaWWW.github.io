@@ -14,7 +14,7 @@
   --accent-strong: #0a5d57;
   --accent-soft: rgba(14, 122, 115, 0.08);
   --sand: #c88c53;
-  --shadow: 0 18px 60px rgba(15, 40, 44, 0.1);
+  --shadow: 0 20px 70px rgba(15, 40, 44, 0.08);
   --radius-xl: 32px;
   --radius-lg: 24px;
   --radius-md: 18px;
@@ -90,7 +90,7 @@ svg {
   position: sticky;
   top: 0;
   z-index: 20;
-  margin-bottom: 1.4rem;
+  margin-bottom: 1.15rem;
 }
 
 .site-header__inner {
@@ -154,7 +154,7 @@ svg {
 }
 
 .page--home {
-  padding: 2.5rem 0 3rem;
+  padding: 2.1rem 0 3rem;
 }
 
 .hero,
@@ -180,7 +180,7 @@ svg {
 }
 
 .hero {
-  padding: clamp(2.25rem, 4vw, 3.5rem);
+  padding: clamp(2.4rem, 4vw, 3.9rem);
 }
 
 .hero__kicker,
@@ -198,16 +198,16 @@ svg {
 .legacy h1 {
   margin: 0;
   font-family: 'Newsreader', serif;
-  font-size: clamp(3.1rem, 7vw, 5.25rem);
-  line-height: 0.96;
-  letter-spacing: -0.045em;
+  font-size: clamp(3.3rem, 7vw, 5.6rem);
+  line-height: 0.92;
+  letter-spacing: -0.05em;
 }
 
 .hero__statement {
-  max-width: 18ch;
-  margin: 1.35rem 0 0;
-  font-size: clamp(1.4rem, 2.8vw, 2.1rem);
-  line-height: 1.12;
+  max-width: 17ch;
+  margin: 1.1rem 0 0;
+  font-size: clamp(1.35rem, 2.5vw, 1.95rem);
+  line-height: 1.08;
   color: var(--text-muted);
 }
 
@@ -215,26 +215,26 @@ svg {
   display: flex;
   flex-wrap: wrap;
   gap: 0.65rem;
-  margin: 1.35rem 0 0;
+  margin: 1.15rem 0 0;
   padding: 0;
   list-style: none;
 }
 
 .hero-badge {
-  padding: 0.68rem 0.9rem;
+  padding: 0.62rem 0.86rem;
   border-radius: 999px;
   border: 1px solid rgba(14, 122, 115, 0.14);
   background: rgba(255, 255, 255, 0.72);
   color: var(--accent-strong);
-  font-size: 0.78rem;
+  font-size: 0.74rem;
   font-weight: 800;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.09em;
   text-transform: uppercase;
 }
 
 .band {
-  padding: 1.55rem;
-  margin-top: 1rem;
+  padding: 1.45rem;
+  margin-top: 0.9rem;
 }
 
 .band__header {
@@ -259,7 +259,7 @@ svg {
   flex-direction: column;
   gap: 0.2rem;
   min-width: 10.5rem;
-  padding: 0.95rem 1rem;
+  padding: 0.9rem 0.95rem;
   border-radius: 999px;
   border: 1px solid rgba(14, 122, 115, 0.1);
   background: var(--bg-alt);
@@ -281,27 +281,29 @@ svg {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.9rem;
-  margin-top: 1rem;
+  margin-top: 1.1rem;
 }
 
 .proof-card {
-  padding: 1rem;
+  padding: 1rem 1rem 0.95rem;
   border-radius: var(--radius-md);
   border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.58);
+  background: rgba(255, 255, 255, 0.64);
 }
 
 .proof-card__title {
   margin: 0;
-  font-size: 0.96rem;
+  font-size: 0.92rem;
   font-weight: 800;
   line-height: 1.15;
+  letter-spacing: 0.01em;
 }
 
 .proof-card__body {
   margin: 0.5rem 0 0;
   color: var(--text-muted);
-  font-size: 0.92rem;
+  font-size: 0.88rem;
+  line-height: 1.45;
 }
 
 .highlight-list {
@@ -310,9 +312,9 @@ svg {
 }
 
 .highlight-list li {
-  padding-bottom: 0.85rem;
+  padding-bottom: 0.8rem;
   border-bottom: 1px solid var(--line);
-  font-size: 1.03rem;
+  font-size: 0.98rem;
   color: var(--text);
 }
 
@@ -331,11 +333,11 @@ svg {
 .github-card {
   display: grid;
   gap: 1rem;
-  padding: 1rem;
+  padding: 0.95rem;
   border-radius: var(--radius-lg);
   border: 1px solid rgba(255, 255, 255, 0.58);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(250, 247, 241, 0.92));
-  box-shadow: 0 14px 28px rgba(15, 40, 44, 0.08);
+  box-shadow: 0 12px 24px rgba(15, 40, 44, 0.07);
 }
 
 .presence-card {
@@ -366,8 +368,8 @@ svg {
 .presence-title {
   margin: 0;
   font-family: 'Newsreader', serif;
-  font-size: clamp(1.8rem, 3vw, 2.35rem);
-  line-height: 0.96;
+  font-size: clamp(1.7rem, 3vw, 2.15rem);
+  line-height: 0.95;
   letter-spacing: -0.04em;
 }
 
@@ -375,13 +377,14 @@ svg {
 .github-card__body {
   margin: 0;
   color: var(--text-muted);
-  font-size: 0.98rem;
+  font-size: 0.93rem;
+  line-height: 1.5;
 }
 
 .linkedin-card {
   display: grid;
   gap: 0.75rem;
-  padding: 1rem;
+  padding: 0.95rem;
   border-radius: var(--radius-md);
   background: var(--bg-alt);
   border: 1px solid var(--line);
@@ -398,8 +401,8 @@ svg {
 
 .linkedin-card__headline {
   margin: 0;
-  font-size: 0.96rem;
-  line-height: 1.45;
+  font-size: 0.9rem;
+  line-height: 1.42;
 }
 
 .github-card {
@@ -428,7 +431,7 @@ svg {
 .github-card__title {
   margin: 0;
   font-family: 'Newsreader', serif;
-  font-size: 1.5rem;
+  font-size: 1.34rem;
   line-height: 1.02;
   letter-spacing: -0.03em;
 }
@@ -443,7 +446,7 @@ svg {
 .link-list {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.9rem;
+  gap: 0.8rem;
 }
 
 .link-card,
@@ -453,11 +456,11 @@ svg {
   justify-content: space-between;
   gap: 0.8rem;
   min-height: 3.4rem;
-  padding: 0.95rem 1.05rem;
+  padding: 0.9rem 1rem;
   border-radius: var(--radius-md);
   border: 1px solid rgba(255, 255, 255, 0.58);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(250, 247, 241, 0.92));
-  box-shadow: 0 14px 28px rgba(15, 40, 44, 0.08);
+  box-shadow: 0 12px 24px rgba(15, 40, 44, 0.07);
   font-weight: 700;
   transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
 }

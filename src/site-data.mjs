@@ -13,8 +13,8 @@ export const site = {
       en: 'Co-founder, CFO and COO at Candel Medical'
     },
     statement: {
-      es: 'Cofundador y CFO/COO de Candel Medical, construyendo dispositivos médicos de brain stimulation (NIBS) entre Latinoamérica y Estados Unidos.',
-      en: 'Co-founder and CFO/COO at Candel Medical, building brain stimulation medical devices (NIBS) across Latin America and into the US.'
+      es: 'Cofundador y CFO/COO de Candel Medical. Construyo dispositivos médicos de brain stimulation (NIBS) entre Latinoamérica y Estados Unidos.',
+      en: 'Co-founder and CFO/COO at Candel Medical. Building brain stimulation medical devices (NIBS) across Latin America and into the US.'
     },
     image: '/images/pic00.jpg',
     ogImage: '/images/og-cover.svg'
@@ -50,8 +50,8 @@ export const site = {
           en: 'Brain stimulation medical devices | NIBS'
         },
         badges: {
-          es: ['NIH SEED', 'LATAM -> US', 'Medical devices'],
-          en: ['NIH SEED', 'LATAM -> US', 'Medical devices']
+          es: ['NIH SEED', 'LATAM -> US', 'NIBS medical devices'],
+          en: ['NIH SEED', 'LATAM -> US', 'NIBS medical devices']
         }
       },
       validation: {
@@ -104,16 +104,16 @@ export const site = {
         },
         items: {
           es: [
-            'Brain stimulation / NIBS con foco en despliegue clínico y adopción real.',
-            'Escalando Candel Medical entre Latinoamérica y Estados Unidos.',
-            'Finanzas, operaciones y ejecución en una compañía médica de etapa temprana.',
-            'Escribo sobre healthtech, criterio y construcción de compañías.'
+            'Brain stimulation / NIBS con despliegue clínico como prioridad.',
+            'Candel Medical entre Latinoamérica y Estados Unidos.',
+            'Finanzas, operaciones y ejecución en una compañía médica en construcción.',
+            'Escritura sobre healthtech, criterio y construcción de compañías.'
           ],
           en: [
-            'Brain stimulation / NIBS focused on clinical deployment and real adoption.',
-            'Scaling Candel Medical across Latin America and into the US.',
-            'Finance, operations, and execution in an early-stage medical company.',
-            'I write about healthtech, judgment, and company building.'
+            'Brain stimulation / NIBS with clinical deployment as the priority.',
+            'Candel Medical across Latin America and into the US.',
+            'Finance, operations, and execution inside a medical company being built.',
+            'Writing on healthtech, judgment, and company building.'
           ]
         }
       },
@@ -122,29 +122,29 @@ export const site = {
           es: [
             {
               title: 'Dispositivos NIBS',
-              body: 'Brain stimulation no invasiva con foco en despliegue clínico.'
+              body: 'Neuromodulación no invasiva orientada a uso clínico.'
             },
             {
               title: 'LATAM -> US',
-              body: 'Construcción operativa y expansión entre Chile, Latinoamérica y Estados Unidos.'
+              body: 'Construcción operativa entre Chile, Latinoamérica y Estados Unidos.'
             },
             {
               title: 'Finance & Operations',
-              body: 'Responsabilidad directa sobre finanzas, operaciones y ejecución en Candel Medical.'
+              body: 'Responsabilidad directa sobre finanzas, operaciones y ejecución.'
             }
           ],
           en: [
             {
               title: 'NIBS medical devices',
-              body: 'Non-invasive brain stimulation with a focus on clinical deployment.'
+              body: 'Non-invasive neuromodulation built for clinical use.'
             },
             {
               title: 'LATAM -> US',
-              body: 'Operational buildout and expansion across Chile, Latin America, and the US.'
+              body: 'Operational buildout across Chile, Latin America, and the US.'
             },
             {
               title: 'Finance & Operations',
-              body: 'Direct ownership of finance, operations, and execution at Candel Medical.'
+              body: 'Direct ownership of finance, operations, and execution.'
             }
           ]
         }
@@ -159,8 +159,8 @@ export const site = {
           en: 'Co-founder, CFO and COO @ Candel Medical'
         },
         summary: {
-          es: 'Lidero finanzas, operaciones y ejecución en una compañía de dispositivos médicos con expansión entre Latinoamérica y Estados Unidos.',
-          en: 'I lead finance, operations, and execution in a medical device company expanding across Latin America and into the US.'
+          es: 'Lidero finanzas, operaciones y ejecución en una compañía de dispositivos médicos con ambición regional e internacional.',
+          en: 'I lead finance, operations, and execution in a medical device company with regional and international ambition.'
         },
         linkedin: {
           label: {
@@ -186,8 +186,8 @@ export const site = {
             en: 'Building history'
           },
           body: {
-            es: 'Contribuciones visibles, constancia de trabajo y construcción iterativa.',
-            en: 'Visible contributions, consistency, and iterative building.'
+            es: 'Ritmo de trabajo, constancia y construcción iterativa.',
+            en: 'Work rhythm, consistency, and iterative building.'
           },
           chartAlt: {
             es: 'Historial de contribuciones de GitHub de Sebastián Muena',
