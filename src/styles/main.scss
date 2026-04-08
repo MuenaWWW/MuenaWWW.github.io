@@ -273,9 +273,128 @@ svg {
   border-bottom: 0;
 }
 
+.presence-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: 1rem;
+}
+
+.presence-card,
+.github-card {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.58);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(250, 247, 241, 0.92));
+  box-shadow: 0 14px 28px rgba(15, 40, 44, 0.08);
+}
+
+.presence-card {
+  grid-template-columns: 184px minmax(0, 1fr);
+  align-items: stretch;
+}
+
+.portrait-link {
+  display: block;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  background: linear-gradient(180deg, #dbe7e5 0%, #8ba2a0 100%);
+  min-height: 100%;
+}
+
+.portrait-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.presence-copy {
+  display: grid;
+  gap: 0.8rem;
+  align-content: start;
+}
+
+.presence-title {
+  margin: 0;
+  font-family: 'Newsreader', serif;
+  font-size: clamp(1.8rem, 3vw, 2.35rem);
+  line-height: 0.96;
+  letter-spacing: -0.04em;
+}
+
+.presence-summary,
+.github-card__body {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.98rem;
+}
+
+.linkedin-card {
+  display: grid;
+  gap: 0.75rem;
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  background: var(--bg-alt);
+  border: 1px solid var(--line);
+}
+
+.linkedin-card__label {
+  margin: 0;
+  color: var(--accent-strong);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.linkedin-card__headline {
+  margin: 0;
+  font-size: 0.96rem;
+  line-height: 1.45;
+}
+
+.github-card {
+  color: inherit;
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+.github-card:hover,
+.github-card:focus-visible {
+  transform: translateY(-2px);
+  border-color: rgba(14, 122, 115, 0.18);
+  box-shadow: 0 18px 32px rgba(15, 40, 44, 0.1);
+}
+
+.github-card__header {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.github-card__header .band__label {
+  margin-bottom: 0.45rem;
+}
+
+.github-card__title {
+  margin: 0;
+  font-family: 'Newsreader', serif;
+  font-size: 1.5rem;
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+}
+
+.github-card__chart {
+  width: 100%;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
 .link-list {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.9rem;
 }
 
@@ -395,6 +514,8 @@ svg {
     max-width: 100%;
   }
 
+  .presence-grid,
+  .presence-card,
   .signal-list,
   .link-list {
     grid-template-columns: 1fr;

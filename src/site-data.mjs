@@ -21,6 +21,7 @@ export const site = {
   },
   links: {
     linkedin: 'https://www.linkedin.com/in/sebastian-muena-cortes/',
+    github: 'https://github.com/MuenaWWW',
     substack: 'https://healthtechcl.substack.com',
     candel: 'https://candel.cl',
     repo: 'https://github.com/MuenaWWW/MuenaWWW.github.io'
@@ -112,6 +113,52 @@ export const site = {
           ]
         }
       },
+      presence: {
+        heading: {
+          es: 'Sobre mí',
+          en: 'About'
+        },
+        title: {
+          es: 'Cofundador, CFO y COO @ Candel Medical',
+          en: 'Co-founder, CFO and COO @ Candel Medical'
+        },
+        summary: {
+          es: 'Lidero finanzas, operaciones y ejecución en una compañía de dispositivos médicos con expansión entre Latinoamérica y Estados Unidos.',
+          en: 'I lead finance, operations, and execution in a medical device company expanding across Latin America and into the US.'
+        },
+        linkedin: {
+          label: {
+            es: 'LinkedIn',
+            en: 'LinkedIn'
+          },
+          headline: {
+            es: 'Brain stimulation (NIBS) medical devices | NIH SEED | CFO/COO @ Candel | Finance & Operations',
+            en: 'Brain stimulation (NIBS) medical devices | NIH SEED | CFO/COO @ Candel | Finance & Operations'
+          },
+          cta: {
+            es: 'Seguir en LinkedIn',
+            en: 'Follow on LinkedIn'
+          }
+        },
+        github: {
+          label: {
+            es: 'GitHub',
+            en: 'GitHub'
+          },
+          title: {
+            es: 'Historial de construcción',
+            en: 'Building history'
+          },
+          body: {
+            es: 'Contribuciones visibles, constancia de trabajo y construcción iterativa.',
+            en: 'Visible contributions, consistency, and iterative building.'
+          },
+          chartAlt: {
+            es: 'Historial de contribuciones de GitHub de Sebastián Muena',
+            en: 'GitHub contribution history for Sebastián Muena'
+          }
+        }
+      },
       linksSection: {
         heading: {
           es: 'Links',
@@ -127,6 +174,11 @@ export const site = {
             key: 'linkedin',
             label: 'LinkedIn',
             href: 'https://www.linkedin.com/in/sebastian-muena-cortes/'
+          },
+          {
+            key: 'github',
+            label: 'GitHub',
+            href: 'https://github.com/MuenaWWW'
           }
         ]
       }
