@@ -48,6 +48,10 @@ export const site = {
         kicker: {
           es: 'Brain stimulation medical devices | NIBS',
           en: 'Brain stimulation medical devices | NIBS'
+        },
+        badges: {
+          es: ['NIH SEED', 'LATAM -> US', 'Medical devices'],
+          en: ['NIH SEED', 'LATAM -> US', 'Medical devices']
         }
       },
       validation: {
@@ -110,6 +114,38 @@ export const site = {
             'Scaling Candel Medical across Latin America and into the US.',
             'Finance, operations, and execution in an early-stage medical company.',
             'I write about healthtech, judgment, and company building.'
+          ]
+        }
+      },
+      proof: {
+        items: {
+          es: [
+            {
+              title: 'Dispositivos NIBS',
+              body: 'Brain stimulation no invasiva con foco en despliegue clínico.'
+            },
+            {
+              title: 'LATAM -> US',
+              body: 'Construcción operativa y expansión entre Chile, Latinoamérica y Estados Unidos.'
+            },
+            {
+              title: 'Finance & Operations',
+              body: 'Responsabilidad directa sobre finanzas, operaciones y ejecución en Candel Medical.'
+            }
+          ],
+          en: [
+            {
+              title: 'NIBS medical devices',
+              body: 'Non-invasive brain stimulation with a focus on clinical deployment.'
+            },
+            {
+              title: 'LATAM -> US',
+              body: 'Operational buildout and expansion across Chile, Latin America, and the US.'
+            },
+            {
+              title: 'Finance & Operations',
+              body: 'Direct ownership of finance, operations, and execution at Candel Medical.'
+            }
           ]
         }
       },

@@ -124,6 +124,21 @@ function renderHome(lang) {
     .map((item) => `<li>${escapeHtml(item)}</li>`)
     .join('');
 
+  const heroBadges = page.hero.badges[lang]
+    .map((item) => `<li class="hero-badge">${escapeHtml(item)}</li>`)
+    .join('');
+
+  const proof = page.proof.items[lang]
+    .map(
+      (item) => `
+        <article class="proof-card">
+          <h2 class="proof-card__title">${escapeHtml(item.title)}</h2>
+          <p class="proof-card__body">${escapeHtml(item.body)}</p>
+        </article>
+      `
+    )
+    .join('');
+
   const presence = `
     <div class="presence-grid">
       <div class="presence-card">
@@ -172,6 +187,9 @@ function renderHome(lang) {
         <p class="hero__kicker">${escapeHtml(page.hero.kicker[lang])}</p>
         <h1>${escapeHtml(site.person.fullName)}</h1>
         <p class="hero__statement">${escapeHtml(site.person.statement[lang])}</p>
+        <ul class="hero-badge-list" aria-label="${lang === 'es' ? 'Foco actual' : 'Current focus'}">
+          ${heroBadges}
+        </ul>
       </section>
 
       <section class="band" aria-labelledby="validation-title">
@@ -181,6 +199,9 @@ function renderHome(lang) {
         <ul class="signal-list" id="validation-title">
           ${signals}
         </ul>
+        <div class="proof-grid">
+          ${proof}
+        </div>
       </section>
 
       <section class="band" aria-labelledby="highlights-title">
