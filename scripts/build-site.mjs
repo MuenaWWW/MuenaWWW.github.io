@@ -113,14 +113,11 @@ function renderHome(lang) {
       (item) => `
         <li class="signal">
           <strong>${escapeHtml(item.label)}</strong>
+          <em>${escapeHtml(item.frame[lang])}</em>
           <span>${escapeHtml(item.note[lang])}</span>
         </li>
       `
     )
-    .join('');
-
-  const highlights = page.highlights.items[lang]
-    .map((item) => `<li>${escapeHtml(item)}</li>`)
     .join('');
 
   const heroBadges = page.hero.badges[lang]
@@ -226,18 +223,15 @@ function renderHome(lang) {
         <ul class="signal-list" id="validation-title">
           ${signals}
         </ul>
-        <div class="proof-grid">
-          ${proof}
-        </div>
       </section>
 
-      <section class="band" aria-labelledby="highlights-title">
+      <section class="band" aria-labelledby="proof-title">
         <div class="band__header">
-          <p class="band__label">${escapeHtml(page.highlights.heading[lang])}</p>
+          <p class="band__label">${escapeHtml(page.proof.heading[lang])}</p>
         </div>
-        <ul class="highlight-list" id="highlights-title">
-          ${highlights}
-        </ul>
+        <div class="proof-grid" id="proof-title">
+          ${proof}
+        </div>
       </section>
 
       <section class="band" aria-labelledby="presence-title">
