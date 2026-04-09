@@ -431,8 +431,9 @@ svg {
 
 .github-meta {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 1fr;
   gap: 0.6rem;
+  max-width: 12rem;
 }
 
 .github-meta__item {
@@ -499,7 +500,7 @@ svg {
 .activity-legend {
   margin: 0.72rem 0 0;
   color: var(--text-muted);
-  font-size: 0.76rem;
+  font-size: 0.72rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }

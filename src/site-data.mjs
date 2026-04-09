@@ -13,8 +13,8 @@ export const site = {
       en: 'Co-founder, CFO and COO at Candel Medical'
     },
     statement: {
-      es: 'Cofundador y CFO/COO de Candel Medical. Construyo dispositivos médicos de brain stimulation (NIBS) con despliegue clínico entre Latinoamérica y Estados Unidos.',
-      en: 'Co-founder and CFO/COO at Candel Medical. Building brain stimulation medical devices (NIBS) for clinical deployment across Latin America and into the US.'
+      es: 'Cofundador y CFO/COO de Candel Medical. Construyo dispositivos médicos de estimulación cerebral no invasiva con despliegue clínico entre Latinoamérica y Estados Unidos.',
+      en: 'Co-founder and CFO/COO at Candel Medical. Building non-invasive brain stimulation medical devices for clinical deployment across Latin America and into the US.'
     },
     image: '/images/pic00.jpg',
     ogImage: '/images/og-cover.svg'
@@ -41,8 +41,8 @@ export const site = {
         en: 'Sebastián Muena | Co-founder of Candel Medical'
       },
       description: {
-        es: 'Sebastián Muena: cofundador y CFO/COO de Candel Medical. Brain stimulation medical devices (NIBS), NIH SEED y operación entre Latinoamérica y Estados Unidos.',
-        en: 'Sebastián Muena: co-founder and CFO/COO at Candel Medical. Brain stimulation medical devices (NIBS), NIH SEED, and operating scope across Latin America and the US.'
+        es: 'Sebastián Muena: cofundador y CFO/COO de Candel Medical. Dispositivos médicos de estimulación cerebral no invasiva, NIH SEED y operación entre Latinoamérica y Estados Unidos.',
+        en: 'Sebastián Muena: co-founder and CFO/COO at Candel Medical. Non-invasive brain stimulation medical devices, NIH SEED, and operating scope across Latin America and the US.'
       },
       hero: {
         kicker: {
@@ -50,7 +50,7 @@ export const site = {
           en: 'Brain stimulation medical devices | NIBS'
         },
         badges: {
-          es: ['NIH SEED', 'LATAM -> US', 'NIBS medical devices'],
+          es: ['NIH SEED', 'LATAM -> US', 'Dispositivos NIBS'],
           en: ['NIH SEED', 'LATAM -> US', 'NIBS medical devices']
         }
       },
@@ -67,7 +67,7 @@ export const site = {
               en: 'international program'
             },
             note: {
-              es: 'respaldo de validación global',
+              es: 'validación global',
               en: 'global validation signal'
             }
           },
@@ -78,7 +78,7 @@ export const site = {
               en: 'public acceleration'
             },
             note: {
-              es: 'plataforma de crecimiento temprano',
+              es: 'crecimiento temprano',
               en: 'early growth platform'
             }
           },
@@ -89,7 +89,7 @@ export const site = {
               en: 'public innovation'
             },
             note: {
-              es: 'respaldo institucional en ciencia e innovación',
+              es: 'ciencia e innovación',
               en: 'institutional backing in science and innovation'
             }
           },
@@ -100,7 +100,7 @@ export const site = {
               en: 'regional backing'
             },
             note: {
-              es: 'señal de proyección regional',
+              es: 'proyección regional',
               en: 'regional scale signal'
             }
           },
@@ -111,7 +111,7 @@ export const site = {
               en: 'public scale support'
             },
             note: {
-              es: 'instrumentos para expansión y consolidación',
+              es: 'expansión y consolidación',
               en: 'support for expansion and consolidation'
             }
           }
@@ -119,26 +119,26 @@ export const site = {
       },
       proof: {
         heading: {
-          es: 'Proof',
+          es: 'Señal',
           en: 'Proof'
         },
         items: {
           es: [
             {
               title: 'Dispositivos NIBS',
-              body: 'Brain stimulation y neuromodulación no invasiva orientadas a despliegue clínico.'
+              body: 'Estimulación cerebral no invasiva orientada a despliegue clínico.'
             },
             {
               title: 'Operación LATAM -> US',
-              body: 'Candel Medical con operación entre Chile, Latinoamérica y Estados Unidos.'
+              body: 'Operación entre Chile, Latinoamérica y Estados Unidos.'
             },
             {
-              title: 'Execution ownership',
-              body: 'Responsabilidad directa sobre finanzas, operaciones y ejecución.'
+              title: 'Responsabilidad operativa',
+              body: 'Finanzas, operaciones y ejecución bajo responsabilidad directa.'
             },
             {
-              title: 'Thinking in public',
-              body: 'Escritura sobre healthtech, criterio y construcción de compañías.'
+              title: 'Escritura pública',
+              body: 'Ideas sobre healthtech, criterio y construcción de compañías.'
             }
           ],
           en: [
@@ -163,7 +163,7 @@ export const site = {
       },
       presence: {
         heading: {
-          es: 'Sobre mí',
+          es: 'Presencia',
           en: 'About'
         },
         title: {
@@ -171,8 +171,8 @@ export const site = {
           en: 'Co-founder, CFO and COO @ Candel Medical'
         },
         summary: {
-          es: 'Operador fundador con responsabilidad directa sobre finanzas, operaciones y ejecución en una compañía de dispositivos médicos.',
-          en: 'Founder-operator with direct responsibility for finance, operations, and execution in a medical device company.'
+          es: 'Perfil público, trayectoria ejecutiva y presencia profesional en tiempo real.',
+          en: 'Public profile, executive track record, and professional presence in real time.'
         },
         linkedin: {
           label: {
@@ -198,18 +198,14 @@ export const site = {
             en: 'Build rhythm'
           },
           body: {
-            es: 'Ritmo de trabajo, constancia y construcción iterativa.',
+            es: 'Constancia y construcción iterativa.',
             en: 'Work rhythm, consistency, and iterative building.'
           },
           meta: {
             es: [
               {
                 value: 'GitHub',
-                label: 'perfil activo'
-              },
-              {
-                value: 'Iterativo',
-                label: 'ritmo de trabajo'
+                label: 'actividad'
               }
             ],
             en: [
@@ -233,7 +229,7 @@ export const site = {
             [1, 2, 1, 0, 1, 2, 1, 3, 4, 2, 1, 3, 2, 1, 3, 4]
           ],
           legend: {
-            es: 'Actividad visible en GitHub',
+            es: 'Actividad visible',
             en: 'Visible GitHub activity'
           }
         }
