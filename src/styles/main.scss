@@ -436,11 +436,79 @@ svg {
   letter-spacing: -0.03em;
 }
 
-.github-card__chart {
-  width: 100%;
+.github-meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.7rem;
+}
+
+.github-meta__item {
+  padding: 0.75rem 0.8rem;
   border-radius: var(--radius-sm);
   border: 1px solid var(--line);
-  background: #fff;
+  background: rgba(255, 255, 255, 0.56);
+}
+
+.github-meta__item strong,
+.github-meta__item span {
+  display: block;
+}
+
+.github-meta__item strong {
+  font-size: 0.88rem;
+  font-weight: 800;
+}
+
+.github-meta__item span {
+  margin-top: 0.18rem;
+  color: var(--text-muted);
+  font-size: 0.76rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.activity-panel {
+  padding: 0.9rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.activity-grid {
+  display: grid;
+  grid-template-columns: repeat(16, minmax(0, 1fr));
+  grid-template-rows: repeat(7, 1fr);
+  gap: 0.32rem;
+}
+
+.activity-cell {
+  aspect-ratio: 1;
+  border-radius: 4px;
+  background: #e7efe8;
+}
+
+.activity-cell--1 {
+  background: #c9e7cf;
+}
+
+.activity-cell--2 {
+  background: #89cf9a;
+}
+
+.activity-cell--3 {
+  background: #3fa86b;
+}
+
+.activity-cell--4 {
+  background: #1f7b47;
+}
+
+.activity-legend {
+  margin: 0.72rem 0 0;
+  color: var(--text-muted);
+  font-size: 0.76rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 .link-list {

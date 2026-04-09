@@ -107,7 +107,6 @@ function renderFooter() {
 
 function renderHome(lang) {
   const page = site.pages.home;
-  const contributionChart = `https://ghchart.rshah.org/0e7a73/MuenaWWW`;
 
   const signals = page.validation.items
     .map(
@@ -139,6 +138,26 @@ function renderHome(lang) {
     )
     .join('');
 
+  const activityCells = page.presence.github.grid
+    .flatMap((row, rowIndex) =>
+      row.map(
+        (value, colIndex) =>
+          `<span class="activity-cell activity-cell--${value}" style="--col:${colIndex + 1}; --row:${rowIndex + 1};"></span>`
+      )
+    )
+    .join('');
+
+  const githubMeta = page.presence.github.meta[lang]
+    .map(
+      (item) => `
+        <div class="github-meta__item">
+          <strong>${escapeHtml(item.value)}</strong>
+          <span>${escapeHtml(item.label)}</span>
+        </div>
+      `
+    )
+    .join('');
+
   const presence = `
     <div class="presence-grid">
       <div class="presence-card">
@@ -164,7 +183,15 @@ function renderHome(lang) {
           ${icon('github')}
         </div>
         <p class="github-card__body">${escapeHtml(page.presence.github.body[lang])}</p>
-        <img class="github-card__chart" src="${contributionChart}" alt="${escapeHtml(page.presence.github.chartAlt[lang])}" loading="lazy" />
+        <div class="github-meta">
+          ${githubMeta}
+        </div>
+        <div class="activity-panel" aria-label="${escapeHtml(page.presence.github.legend[lang])}">
+          <div class="activity-grid">
+            ${activityCells}
+          </div>
+          <p class="activity-legend">${escapeHtml(page.presence.github.legend[lang])}</p>
+        </div>
       </a>
     </div>
   `;

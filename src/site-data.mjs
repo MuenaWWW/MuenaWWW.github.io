@@ -13,8 +13,8 @@ export const site = {
       en: 'Co-founder, CFO and COO at Candel Medical'
     },
     statement: {
-      es: 'Cofundador y CFO/COO de Candel Medical. Construyo dispositivos médicos de brain stimulation (NIBS) entre Latinoamérica y Estados Unidos.',
-      en: 'Co-founder and CFO/COO at Candel Medical. Building brain stimulation medical devices (NIBS) across Latin America and into the US.'
+      es: 'Cofundador y CFO/COO de Candel Medical. Construyo dispositivos médicos de brain stimulation (NIBS) con despliegue clínico entre Latinoamérica y Estados Unidos.',
+      en: 'Co-founder and CFO/COO at Candel Medical. Building brain stimulation medical devices (NIBS) for clinical deployment across Latin America and into the US.'
     },
     image: '/images/pic00.jpg',
     ogImage: '/images/og-cover.svg'
@@ -105,13 +105,13 @@ export const site = {
         items: {
           es: [
             'Brain stimulation / NIBS con despliegue clínico como prioridad.',
-            'Candel Medical entre Latinoamérica y Estados Unidos.',
+            'Candel Medical con operación entre Latinoamérica y Estados Unidos.',
             'Finanzas, operaciones y ejecución en una compañía médica en construcción.',
             'Escritura sobre healthtech, criterio y construcción de compañías.'
           ],
           en: [
             'Brain stimulation / NIBS with clinical deployment as the priority.',
-            'Candel Medical across Latin America and into the US.',
+            'Candel Medical operating across Latin America and into the US.',
             'Finance, operations, and execution inside a medical company being built.',
             'Writing on healthtech, judgment, and company building.'
           ]
@@ -182,16 +182,47 @@ export const site = {
             en: 'GitHub'
           },
           title: {
-            es: 'Historial de construcción',
-            en: 'Building history'
+            es: 'Ritmo de construcción',
+            en: 'Build rhythm'
           },
           body: {
             es: 'Ritmo de trabajo, constancia y construcción iterativa.',
             en: 'Work rhythm, consistency, and iterative building.'
           },
-          chartAlt: {
-            es: 'Historial de contribuciones de GitHub de Sebastián Muena',
-            en: 'GitHub contribution history for Sebastián Muena'
+          meta: {
+            es: [
+              {
+                value: 'GitHub',
+                label: 'perfil activo'
+              },
+              {
+                value: 'Iterativo',
+                label: 'ritmo de trabajo'
+              }
+            ],
+            en: [
+              {
+                value: 'GitHub',
+                label: 'active profile'
+              },
+              {
+                value: 'Iterative',
+                label: 'build cadence'
+              }
+            ]
+          },
+          grid: [
+            [0, 1, 0, 2, 1, 0, 2, 3, 1, 0, 2, 1, 0, 2, 3, 1],
+            [1, 2, 1, 3, 2, 1, 3, 4, 2, 1, 3, 2, 1, 3, 4, 2],
+            [0, 1, 2, 2, 1, 2, 3, 2, 1, 2, 4, 2, 1, 2, 3, 1],
+            [1, 0, 1, 3, 2, 1, 2, 4, 2, 1, 3, 1, 0, 2, 4, 2],
+            [2, 1, 0, 2, 3, 2, 1, 3, 2, 1, 2, 3, 1, 1, 3, 2],
+            [0, 1, 2, 1, 2, 1, 0, 2, 3, 1, 0, 2, 2, 1, 2, 3],
+            [1, 2, 1, 0, 1, 2, 1, 3, 4, 2, 1, 3, 2, 1, 3, 4]
+          ],
+          legend: {
+            es: 'Actividad visible en GitHub',
+            en: 'Visible GitHub activity'
           }
         }
       },
